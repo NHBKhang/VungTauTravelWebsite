@@ -1,0 +1,110 @@
+body{
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+#showbg {
+  background-image:
+  linear-gradient(to bottom, rgba(245, 246, 252, 0.52), #2c5364ab),
+  url('../../img/image.jpg');
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+  color: white;
+  padding: 0;
+}
+.home-content
+{
+  text-align: center;
+  padding-top:200px;
+  color: white;
+}
+.home-content h3 {
+  color: white;
+  font-size:4rem;
+  margin-bottom:20px;
+}
+.home-content button{
+  background-color: rgba(255, 166, 0, 0.6);
+  padding:20px 40px;
+  border-color:rgba(255, 255, 0, 0.6);
+  border-width: 5px;
+  border-radius: 10px;
+  color:white;
+  font-size:20px;
+  margin:0 10px;
+}
+.contactform{
+  display: none;
+}
+.contactform form{
+  margin:30px auto;
+  width:70%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 1rem;
+  padding:20px;
+  background: linear-gradient(to right, #005aa7, #fffde4);
+  color:white;
+}
+.contactform form .inputBox{
+  margin-bottom:10px;
+  margin-top:10px;
+}
+.inputBox input{
+  padding:10px;
+  font-size: 20px;
+  border-radius: .5rem;
+  border:0.1rem solid rgb(130, 129, 129);
+  width:50%;
+}
+.inputBox textarea{
+  width:100%;
+  height:200px;
+  font-size: 15px;
+  padding:10px;
+  font-family: Arial, Helvetica, sans-serif !important;
+  outline:none;
+  border: 0.1rem solid rgb(130, 129, 129);
+  border-radius: 0.5rem;
+}
+.btn {
+  padding:15px 40px;
+  font-size: 20px;
+  background: linear-gradient(to right, #00f260, #0575e6);
+  border-radius: 1rem;
+  color:white;
+  border-color:yellow;
+}
+.contactinfo
+{
+  display:none;
+}
+.infocontainer
+{
+  margin:30px auto;
+  width:70%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 1rem;
+  padding:20px;
+  background: linear-gradient(to right, #0575e6, #021b79);
+  color:white;
+  font-size:30px;
+}
+@media screen and (max-width: 560px){
+  #showbg h3
+  {
+    font-size: 3rem;
+  }
+  .home-content button{
+    padding: 5px 10px;
+    margin: 0 2px;
+  }
+  .contactform form{
+    margin:0;
+    width:100%;
+  }
+  .infocontainer
+  {
+    margin:0;
+    width:100%;
+    font-size:20px;
+  }
+}

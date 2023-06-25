@@ -1,0 +1,174 @@
+*{
+    box-sizing: border-box;
+}
+.inline{
+    display: inline;
+}
+body
+{
+    background: linear-gradient(to right, #005aa7, #fffde4);
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 100px auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    position: relative;
+}
+.title{
+    border-bottom: 2px solid black;
+}
+#back, #home{
+    background-color: rgb(255, 255, 255, 0);
+    font-size: 2em;
+    border: none;
+    opacity: 0.7;
+}
+#back i, #home i{
+    color: rgb(82, 81, 81);
+    padding: 5px;
+    margin: 0%;
+}
+#back{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#home{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#back i:hover, #home i:hover{
+    color: black;
+}
+.title h1{
+    font-size: 3em;
+    color: rgb(14, 105, 14);
+    text-shadow: 2px 1px rgb(146, 231, 163);
+    padding:0;
+    padding-bottom: 45px;
+    margin: 5px;
+    font-family: fontChampion;
+    word-spacing: 7px;
+    cursor: none;
+    text-align: center;
+}
+.title h1:hover{
+    color:rgb(32, 103, 10);
+    text-shadow:2px 1px rgb(186, 246, 168);
+}
+@font-face {
+    font-family: fontChampion;
+    src: url(../../img/font/font.ttf);
+}
+.form-container h3{
+    font-size: 1.7em;
+    padding: 5px;
+    margin:10px 20px 0;
+}
+.form-container .signup__field{
+    padding:5px;
+    margin: 0 10px;
+}
+.form-container .signup__field label{
+    display: block;
+    font-size: 1em;
+    padding: 5px;
+    margin: 0;
+}
+input:focus{
+    outline: none;
+}
+.form-container{
+    background: linear-gradient(wheat 0%, whitesmoke 25%, white 70%);
+}
+.form-container .signup__field input{
+    border: none;
+    border-radius: 10px;
+    border-bottom: 2px solid gray;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+}
+.form-container .signup__field input:hover{
+    border-color: pink;
+}
+.form-container .signup__field input:focus{
+    border-color: palevioletred;
+}
+.signup__button .button{
+    border-radius: 5px;
+    background-color: aqua;
+    border: 2px solid blue;
+    padding: 5px;
+    margin: 10px;
+    color: black;
+    text-shadow: .3px .2px gray;
+    font-size: 1em;
+    font-weight: 500;
+    position: absolute;
+    bottom: 215px;
+    right: 5px;
+}
+.signup__button .button:hover{
+    background-color: rgb(132, 255, 255);
+    border-color: rgb(2, 2, 133);
+}
+.social-lmc{
+    background-color: rgb(166, 166, 166);
+    margin: 0;
+    padding: 0;
+    border-radius:0 0 5px 5px;
+}
+.social-lmc .or{
+    font-size: 1em;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+.social-lmc .social-signin{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 10px 15px;
+}
+.social-lmc .social-signin img{
+    width: 25px;
+    display: inline;
+}
+a{
+    text-decoration: none;
+}
+.social-lmc .social-signin>div a div{
+    display: inline;
+    font-size: 1.2em;
+    color: aliceblue;
+    padding:15px;
+}
+.social-box{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.social-lmc .social-signin .fb.signin{
+    background-color: rgb(60, 90, 150); 
+}
+.social-lmc .social-signin .gg.signin{
+    background-color: rgb(66, 123, 244);
+}
+.social-lmc .social-signin .tw.signin{
+    background-color:#00acee;
+}
+@media screen and (max-width: 550px) {
+    .social-lmc .social-signin>div a div p.inline{
+        display: none;
+    }
+    .social-lmc .social-signin>div a div{
+        font-size: 1.2em;
+        padding: 5px;
+        margin: 0;
+    }
+}

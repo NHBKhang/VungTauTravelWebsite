@@ -1,0 +1,312 @@
+ /* body section */
+ /*section 1 */
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+    padding:0 !important;
+    overflow: hidden;
+  }
+  .home .home-content{
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;;
+  }
+  
+  .home .home-content h3{
+    font-size: 4.5rem;
+    color:#fff;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+    padding: 5px;
+    margin: 5px;
+    padding-top:45px;
+  }
+  
+  .home .home-content p{
+    font-size: 2.5rem;
+    color:#fff;
+    padding:.5rem 0;
+  }
+  .home .control .home-pictures img{
+    height:100%;
+    width:100%;
+    display: block;
+    background:#fff;
+    margin:0 auto;
+    position: relative;
+  }
+  .click-box{
+    display: inline-block;
+    margin-top: 1rem;
+    background:orange;
+    color:#fff;
+    padding:.8rem 3rem;
+    border:.2rem solid orange;
+    cursor: pointer;
+    font-size: 1.7rem;
+  }
+  
+  .click-box:hover{
+    background:rgba(255, 165, 0,.2);
+    transition: all .5s linear;
+  }
+/*section 2 */
+.wrapper{
+    margin: 2em;
+    height: 100%;
+}
+#title{
+    display: flex;
+    padding: 0;
+    margin:20px 0;
+    color: white;
+    border: none;
+    border-bottom:5px solid#405de6;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#title>h1{
+    display: flex;
+    font-size: 1.5em;
+    text-shadow: 0.7px 0.7px black ;
+    background: linear-gradient(lightblue 30%,rgb(41, 173, 255) 70%,#405de6 100%) ;
+    padding: 10px;
+    margin: 0;
+    padding-right: 30px !important;
+    border: none;
+    border-radius: 10px 50px 0 0;
+    height: 100%;
+    margin-bottom: 0;
+    padding: 0.5em;
+}
+.card-item
+{
+    position: relative;
+    width: 275px;
+    color: #fff;
+    flex: 0 0 275px;
+    margin-right:10px;
+    margin-left:10px;
+}
+.box-container{
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    flex-direction: column;
+    border-radius: 40px;
+    border: 1px solid gray;
+    width: 100%;
+    padding:0;
+    margin:0;
+}
+.imgHolder{
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 6px 6px 0px 0px;
+    width:100%;
+    padding: 0 0 56%;
+    margin: 0;
+}
+.box-container .textwrap {
+    display:flex;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: rgb(255,255,255);
+    border-radius: 0;
+    height: 100%;
+    width:100%;
+    padding: 10px 16px 0px;
+    margin:0;
+}
+.box-container .textwrap .nameplace{ 
+    font-size: 16px; 
+    line-height: 20px; 
+    color: rgb(33, 33, 33); 
+    font-weight: 700; 
+    max-height: 40px; 
+    overflow: hidden;
+    max-width: 100%;
+}
+.box-container .textwrap .aboutplace{ 
+    font-size: 12px; 
+    line-height: 16px; 
+    color: rgb(101, 101, 101);
+    font-weight: 100; 
+    height: 80px;
+    max-width: 100%;
+    border-radius: 2px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow:hidden;
+}
+.box-container .textwrap .quality{
+    padding: 0;
+    margin: 2px;
+    margin-left: 0;
+}
+.box-container .textwrap .quality i:first-child{
+    padding-left: 0;
+}
+.box-container .textwrap .quality i{
+    color: rgb(234, 234, 53);
+    padding: 3px;
+    margin: 0;
+    font-size: 1em;
+}
+.box-container .textwrap .place i{
+    color:#405de6;
+    padding: 5px;
+    padding-left: 0;
+}
+.box-container .textwrap .place{
+    color:black;
+    font-size: 0.9em;
+}
+.box-container .textwrap .old-price{
+    color: black;
+    text-decoration: line-through;
+    padding: 0;
+    margin: 3px;
+}
+.box-container .textwrap .price{
+    color: lightcoral;
+    font-size: 1.2em;
+}
+.book .text{
+    text-decoration: none;
+}
+.book .text a{
+    color: rgb(255, 91, 91);
+    border:1px solid blue;
+    font-weight: 600;
+    background-color: aqua;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    margin-right: 0;
+}
+.book .text a:hover{
+  color: red;
+  border:1px solid rgb(1, 1, 162);
+  background-color: lightskyblue;
+}
+.showMore{
+    display: flex;
+    overflow: visible;
+    flex-direction:column; 
+    justify-content: flex-end; 
+    background-color: rgb(255, 255, 255); 
+    border-radius: 0px 0px 6px 6px; 
+    height: 100%; width: 100%;
+    padding: 0px 16px 12px; 
+    margin:15px 0px 0px;
+}
+.showMore > p {
+    text-decoration: underline;
+    text-align: right;
+    color: rgb(67, 67, 67)
+}
+.slick-prev:before,.slick-next:before
+{
+    background-color: rgb(70, 69, 69);
+    border-radius: 15px;
+}
+.hotel{
+    border-color: red !important;
+}
+.hotel h1{
+    background: linear-gradient(pink,lightcoral,red) !important;
+    color:rgb(89, 255, 68);
+    text-shadow: .3px .2px green;
+}
+.tour{
+    border-color: greenyellow !important;
+}
+.tour h1{
+    background: linear-gradient(rgb(47, 158, 47),rgb(197, 240, 106),greenyellow) !important;
+    color:chocolate;
+    text-shadow: .3px .2px coral;
+    padding-left: 20px !important;
+    width: 200px;
+}
+.box-container .textwrap{
+    position: relative;
+    height: 180px !important;
+}
+.box-container .textwrap .long{
+    color:black;
+    padding: 3px 0 5px;
+    font-size: 1em;
+}
+.box-container .textwrap .long i{
+    color:grey;
+    padding: 5px;
+    font-size: 1em;
+    padding-left: 0;
+}
+.box-container .textwrap .vehicle{
+    position: absolute;
+    right: 20px;
+    top: 40px;
+}
+.box-container .textwrap .vehicle i{
+    color:rgb(67, 67, 67);
+    padding: 7px;
+    font-size: 1.2em;
+}
+.box-container .textwrap .date{
+    color: black;
+}
+.box-container .textwrap .date i{
+    color:chocolate;
+    padding: 5px;
+    padding-left: 0;
+}
+.trh{
+    display: inline-flex;
+    flex-direction: row;
+}
+.trh .text a{
+    background-color: greenyellow !important;
+    color: rgb(255, 0, 0);
+    border-color:green;
+}
+.trh .text a:hover{
+    background-color: rgb(227, 246, 198) !important;
+    color: rgb(198, 0, 0);
+    border-color:rgb(0, 221, 0);
+}
+.detail button{
+    color: rgb(237, 6, 83);
+    font-weight: 600;
+    background-color: aqua;
+    border-color: rgb(0, 48, 153);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.9em;
+    margin: 5px;
+    margin-top: -6px;
+}
+.detail button:hover{
+    color: red;
+    background-color: aquamarine;
+    border-color: blue;
+}
+.textwrap .nameplace{
+    display: inline;
+}
+.textwrap .nameplace img{
+    display: inline;
+    padding: 0;
+    margin: 0 5px;
+}

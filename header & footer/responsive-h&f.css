@@ -1,0 +1,213 @@
+ /* header */
+ #home{
+    align-items: center;
+    position: relative;
+    padding: 25px;
+}
+div.search{
+    visibility: hidden;
+    position: static;
+}
+div.login{
+    visibility: hidden;
+}
+div.search>form>.responsive{
+    visibility: visible;
+    display: inline;
+    position: absolute;
+    top: 34px;
+    right: 80px;
+    background-color: aliceblue;
+    color: blue;
+    padding: 0;
+    margin: 0;
+    border-radius: 24px;
+}
+div.login i{
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-color: aliceblue;
+    color: blue;
+    border-radius: 30px;
+    font-size: 1.5em;
+}
+#mainMenu .options{
+    font-size: 0.9em;
+    width: 40%;
+}
+.closeMenu>button{
+    position: absolute;
+    left: 40%;
+    padding: 0;
+    font-size: 2em;
+}
+.options>ul>li{
+    padding: 8px;
+    margin: 10px;
+}
+.login .login-button i{
+    position: absolute;
+    top: -10px;
+    right: 5px;
+}
+ /* footer */
+footer{
+    padding: 40px;
+}
+footer .container{
+    justify-content: center;
+    flex-direction: row;
+    align-items:right;
+}
+footer .container .content:first-child{
+    margin-right: 50px;
+}
+footer .container .content{
+    margin-right: 0;
+    margin-bottom: 40px;
+}
+footer .container, .content.contactus , .content.about{
+    width: 100%;
+}
+.content.links, .content.help 
+{
+    display: none;
+}
+@media screen and (max-width: 560px){
+    /* header */
+    #home{
+        padding: 15px;
+        position: relative;
+    }
+    div.title h1{
+        font-size: 2em;
+        position: absolute;
+        left: 70px;
+    }
+    div.logo img{
+        width: 50px;
+        height: 50px;
+    }
+    div.logo{
+        position: absolute;
+        top: 1em;
+        left: 0;
+    }
+    .login .login-button i{
+        font-size: 1em;
+        position: absolute;
+        top: -25px !important;
+        right: 0px !important;
+    }
+    div.search>form>.responsive{
+        position: absolute;
+        font-size: 0.8em;
+        top:3.2em;
+        right: 1.4em;
+    }
+    .menu{
+        padding: 5px;
+    }
+    div.search>form>.responsive>i{
+        padding: 7px;
+    }
+    .nav{
+        font-size: 0.9em;
+        padding: 5px 0;
+        margin: 0;
+    }
+    .menu-button{
+        font-size: 0.8em;
+        margin: 0;
+        padding: 2px 0;
+        display: inline;
+    }
+    .nav>li>a{
+        padding: 0;
+        margin: 0;
+    }
+    #mainMenu .options{
+        width: 50%;
+        font-size: 0.7em;
+    }
+    .closeMenu>button{
+        font-size: 1.5em;
+        left: 50%;
+    }
+    .options>ul>li{
+        padding: 0;
+        margin: 5px;
+    }
+    #login-menu{
+        margin: 0.5em;
+    }
+    #login-menu .lmw h4{
+        font-size: 1em;
+    }
+    #login-menu .lmw .lmc .label{
+        font-size: 0.8em;
+    }
+    #login-menu .lmw .lmc a{
+        font-size: 0.7em;
+    }
+    #login-menu .lmw button{
+        font-size: 0.8em;
+        padding: 0.4em;
+        margin: 0;
+    }
+    #login-menu .lmw p{
+        font-size: 0.9em;
+    }
+    #login-menu .lmw p a{
+        padding: 5px;
+        margin: 3px;
+    }
+    #login-menu .social-lmc .or{
+        font-size: 0.7em;
+    }
+    #login-menu .social-lmc .social-signin{
+        padding: 0;
+    }
+    #login-menu .social-lmc .social-signin .signin{ 
+        padding: 5px;
+        width: 120px;
+        height: 30px;
+    }
+    #login-menu .social-lmc .social-signin .signin div{
+        padding:0;
+        padding-left: 5px;
+    }
+
+}
+@media screen and (max-width: 420px){
+    div.title h1{
+        left: 55px;
+    }
+    div.logo{
+        left: -15px;
+    }
+    div.login i{
+        top:-0.8em;
+        right: 0;
+    }
+    div.search>form>.responsive{
+        top: 3.4em;
+        right: 1.1em;
+    }
+    .nav{
+        font-size: 0.8em;
+    }
+    .nav>li>a{
+        padding: 0;
+    }
+    .menu{
+        padding: 0;
+    }
+    .login .login-button i{
+        position: absolute;
+        right: -5px !important;
+    }
+    
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Vũng Tàu Travel</title>
+        <meta http-equiv="refresh" content="600">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='../Introduce/introduce.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href="../../header & footer/travelwebsite-h&f.css">
+        <link rel="stylesheet" type="text/css" href="../Tour/tour.css">
+        <link rel='stylesheet' type='text/css' media='only screen and (max-width: 1050px)' href='../../header & footer/responsive-h&f.css'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="vehicles.js"></script>
+        <script type="text/javascript" src="../../header & footer/travelwebsite-h&f.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="https://i.pinimg.com/originals/4a/a5/34/4aa534605d1afc465c5bdc5dd80f1ecb.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    </head>
+    <body>
+        <!--loadscript-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!--loadscript-->
+        <header>
+            <div id="home" class="flex">
+                <div id="logo-header" class="logo inline"><img src="../../img/logo.png" alt="logo"></div>
+                <div id="title-header" class="title inline"><h1 title="Vũng Tàu Travel" class="inline">Vung Tau Travel</h1></div>
+                <div id="login-header" class="login inline">
+                    <div class="see inline"><a title="Đăng ký"; href="../Register/register.html">Đăng ký</a></div>
+                    <pre style="font-size:1.4em; padding: 5px;" class="inline">/</pre>
+                    <div class="see inline">
+                        <button onclick="togglemenu()" class="login-button" title="Đăng nhập">Đăng nhập
+                            <i id="login-icon" class="fa-solid fa-user"></i>
+                            <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/3/393c6a1dee81cd3dc84df59672d43edb.svg"/>
+                        </button>
+                    </div>
+                </div>     
+                <div class="search inline">
+                    <form>
+                        <input id="box" aria-expanded="false" title="Nhập" type="search" placeholder="Nhập nơi muốn đến..."/>
+                        <button id="search" title="Tìm" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <p title="TÌm kiếm" onclick="searchbox()" id="search-button" class="responsive"><i class="fa-solid fa-magnifying-glass"></i></p>
+                    </form>
+                </div>
+            </div> 
+        </header>
+        <div id="login-menu">
+            <div class="lmw">
+                <h4>Đăng nhập tài khoản</h4>
+                <div onclick="removemenu()" role="button" id="lm-button"><button type="button"><i class="fa-solid fa-xmark"></i></button></div>
+                <div class="lmc">
+                    <form> 
+                        <div class="label"><label for="email">Email</label></div>
+                        <div class="input email"><input id="email" type="email" name="email"></div>
+                        <div id="error-email">Vui lòng nhập email của bạn</div>
+                    </form>
+                </div>
+                <div class="lmc">
+                    <form>
+                        <div class="label"><label for="password">Mật khẩu</label></div>
+                        <div class="input password"><input id="password" type="password" name="password"></div>
+                        <div id="error-password">Vui lòng nhập mật khẩu của bạn</div>
+                    </form>
+                    <a href="">Quên mật khẩu</a>
+                </div>
+                <div>
+                    <button id="sign" type="submit">Đăng nhập</button>
+                    <p class="inline">Bạn chưa có tài khoản?<a href="../Register/register.html">Đăng ký</a></p>
+                </div>
+            </div>
+            <div class="social-lmc">
+                <div class="or">Hoặc đăng nhập bằng:</div>
+                <div class="social-signin flex">
+                    <div class="fb signin flex">
+                        <a class="flex" href="">
+                            <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/5/5f2c27c2674ad4a01c1cd42b2e0884aa.svg"/>
+                            <div>Facebook</div>
+                        </a>
+                    </div>
+                    <div class="gg signin flex">
+                        <a class="flex" href="">
+                            <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/c/c6bf231775a1d162b567c0882e1d7e3b.svg"/>
+                            <div>Google</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="header-menu" class="sticky">
+            <div class="menu">
+                <nav class="flex">
+                    <div onclick="show()" id="openMenu" role="button" aria-label="Hamburger Menu" class="menu-button flex"><button class="menu-button" type="button"><i class="fa-solid fa-bars"></i></button></div>
+                    <ul class="nav flex">
+                        <li><a href="../../website.html">Trang chủ</a></li>
+                        <li><a href="">Giới thiệu</a></li>
+                        <li><a href="../Tour/tour.html">Tour du lịch</a></li>
+                        <li><a href="../Accommodation/accommodation.html">Khách sạn</a></li>
+                        <li><a href="../Vehicles/vehicles.html">Thuê xe</a></li>
+                        <li><a href="../Contact/contact.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="mainMenu">
+            <div class="background" id="background"></div>
+            <div onclick="hide()" role="button" class="closeMenu"><button id="closeMenu" type="button"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="options flex" id="options">
+                <ul>
+                    <li><a href="../../website.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                    <li><a href=""><i class="fa-solid fa-table-list"></i>Đơn đặt hàng của tôi</a></li>
+                    <li><a href=""><i class="fa-solid fa-envelope"></i>Hộp thư của tôi</a></li>
+                    <li><a href=""><i class="fa-solid fa-clipboard-check"></i>Đã lưu</a></li>
+                    <li><a href=""><i class="fa-solid fa-phone"></i>Liên lạc với chúng tôi</a></li>
+                    <li><a href=""><i class="fa-solid fa-circle-question"></i>Trung tâm trợ giúp</a></li>
+                    <li><a href=""><i class="fa-solid fa-handshake"></i>Trở thành đối tác với chúng tôi</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--section 1 start-->
+        <section class="book mar">
+            <div id="title"><h1>Giới thiệu vài nét về Vũng Tàu</h1></div>
+            <div class="introbox">
+                <iframe class="video" width="100%" height="520" src="https://www.youtube.com/embed/v7aHoVTTHEs" title="Du lịch Vũng Tàu 2021 danh sách 23 địa điểm du lịch Vũng Tàu không thể bỏ qua" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="box1">
+                    <div class="adjustinside">
+                        <h3>Vài nét về Vũng Tàu</h3>    
+                        <div class="abortbox">
+                            <p>Cùng ghé thăm Vũng Tàu, thành phố cảng lớn và nổi tiếng nhất tỉnh Bà Rịa - Vũng Tàu, điểm dừng chân đầy sức hút đối với người yêu biển đảo. Được biết đến như một trong những thành phố đẹp nhất Việt Nam, với không khí ngập tràn “vitamin sea”, nhiều địa điểm tham quan hấp dẫn và ẩm thực độc đáo, Vũng Tàu hiện đang là cái tên hấp dẫn nhất đối với du khách trong nước và quốc tế. Đi du lịch Vũng Tàu, bạn sẽ có cảm giác yên bình với những con đường rộng rãi và làn gió biển mát rượi. Bên dưới là bãi biển xanh tươi xen kẽ những quán ăn ngon, còn bên trên là những ngọn núi lớn nhỏ, đi cùng với những ngôi chùa thanh tịnh - tất cả đã tạo nên một thành phố Vũng Tàu mê hoặc lòng người.</p>
+                            <p>Bà Rịa - Vũng Tàu có hai mùa rõ rệt là mùa mưa và mùa khô. Tuy nhiên, ở Vũng Tàu quanh năm là “mùa du lịch” vì thời tiết không quá nóng cũng không quá lạnh. Thành phố biển này đặc biệt đông đúc khách du lịch vào các dịp Lễ Tết và cuối tuần. Có khá nhiều phương thức di chuyển mà bạn có thể lựa chọn để khám phá Vũng Tàu. Vì quãng đường không quá xa (tính từ thành phố Hồ Chí Minh), bạn có thể vi vu bằng xe máy để trải nghiệm cảm giác "phượt" suốt hành trình. Nếu bạn muốn thoải mái và nhanh chóng hơn, hãy di chuyển bằng xe khách, xe hơi riêng hoặc tàu cao tốc.</p>
+                            <p>Với vô số lựa chọn nghỉ dưỡng sang trọng và đa dạng, bạn có thể tận hưởng gió biển tại Bãi Trước và Bãi Sau, hay vui chơi tại thủy cung Vũng Tàu và công viên Bàu Trũng. Chắc chắn bạn sẽ có những giây phút thư giãn thoải mái tại đây. Minera Hot Springs Bình Châu - tổ hợp du lịch suối khoáng nóng và công viên rừng tự nhiên đầu tiên tại Việt Nam - cũng là một lựa chọn không tồi đâu đấy. Nếu muốn thử thách lòng can đảm bằng những trò chơi cảm giác mạnh hay đường trượt nước gay cấn thì xin mời bạn ghé thăm Khu du lịch Hồ Mây nhé. Đừng quên dành thời gian vi vu cùng du thuyền và thử tài câu cá - đây chắn chắn là trải nghiệm khó quên, giúp bạn khám phá khía cạnh khác biệt của thành phố biển.</p>
+                            <p>Đến thành phố Vũng Tàu, bạn không thể bỏ qua danh sách đặc sản thơm ngon tại nơi đây. Bánh khọt Vũng Tàu luôn nằm đầu danh sách những món ngon phải thử. Tiếp theo là lẩu cá đuối và bánh bông lan Cây Cột Điện. Cuối cùng, đừng quên thưởng thức hải sản tươi sống tại Vũng Tàu nhé.</p>
+                        </div>
+                    </div>
+                    <div><img src="../../img/places/bai-truoc-1.jpg"></div>
+                </div>
+                <iframe style="margin-top: 50px" width="100%" height="500" src="https://www.youtube.com/embed/YjZQMz5oppc" title="Bà Rịa - Vũng Tàu quảng bá du lịch trên sóng BBC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <footer class="flex">
+            <div class="container flex">
+                <div class="content contactus">
+                    <h3>Liên hệ</h3>
+                    <ul>
+                        <li>CÔNG TY THƯƠNG MẠI DU LỊCH VŨNG TÀU TRAVEL</li>
+                        <li>Trụ sở: 371 Nguyễn Kiệm, phường 3, quận Gò vấp, TP.HCM</li>
+                        <li>Tổng đài tư vấn mua hàng: <b>19003851</b></li>
+                        <li>Tổng đài dịch vụ vận chuyển: <b>19005341</b></li>
+                        <li>Email: <a href="mailto:vungtautravel@gmail.com">vungtautravel@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="content about">
+                    <h3>Theo dõi chúng tôi trên</h3>
+                    <ul class="social-icon">
+                        <li><a href=""><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i>Youtube</a></li>
+                    </ul>
+                </div>
+                <div class="content links">
+                    <h3>Đường Dẫn</h3>
+                    <ul class="link">
+                        <li><a href="../../website.html">Trang Chủ</a></li>
+                        <li><a href="">Về Chúng Tôi</a></li>
+                        <li><a href="">Thông Tin Liên Lạc</a></li>
+                        <li><a href="">Dịch Vụ</a></li>
+                        <li><a href="">Điều Kiện Chính Sách</a></li>
+                    </ul>                    
+                </div>
+                <div class="content help">
+                    <h3>Trợ giúp</h3>
+                    <ul class="link">
+                        <li><a href="">Trung tâm trợ giúp</a></li>
+                        <li><a href="">Hình thức thanh toán</a></li>
+                        <li><a href="">Hướng dẫn đăng nhập</a></li>
+                        <li><a href="">Quy định sử dụng </a></li>
+                        <li><a href="">Chính sách bảo mật</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                    </ul>                    
+                </div>
+            </div>
+        </footer>
+        <div onclick="scrollToTop()" role="button" id="return" title="Trở về đầu trang"><button type="button">^</button></div>
+    </body>
+</html>

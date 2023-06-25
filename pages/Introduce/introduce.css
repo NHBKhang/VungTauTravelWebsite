@@ -1,0 +1,40 @@
+.introbox
+{
+    margin: 0 300px;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    padding: 100px;
+    border-radius: 1rem;
+}
+.introbox img
+{
+    width: 100%;
+    margin: 50px 0;
+}
+.adjustinside p
+{
+    margin-bottom: 10px;
+    font-size:0.9rem;
+}
+.adjustinside
+{
+    width:100%;
+    margin-right: 50px;
+}
+.box1{
+    margin-top:30px;
+    display:flex;
+}
+
+
+
+@media screen and (max-width: 1500px) {
+    .introbox
+    {
+        margin:0;
+    }
+}
+@media screen and (max-width: 800px) {
+    .introbox{
+        display:block;
+    }
+}

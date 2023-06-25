@@ -1,0 +1,163 @@
+
+#title{
+    display: flex;
+    padding: 0;
+    margin:20px 0;
+    color: white;
+    border: none;
+    border-bottom:5px solid#405de6;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#title>h1{
+    display: flex;
+    font-size: 1.5em;
+    text-shadow: 0.7px 0.7px black ;
+    background: linear-gradient(lightblue 30%,rgb(41, 173, 255) 70%,#405de6 100%) ;
+    padding: 10px;
+    margin: 0;
+    padding-right: 30px !important;
+    border: none;
+    border-radius: 10px 50px 0 0;
+    height: 100%;
+    margin-bottom: 0;
+    padding: 0.5em;
+}
+.book .row{
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap:1.5rem;
+    align-items: center;
+  }
+  
+  .book .row form{
+    flex:1 1 40rem;
+    padding:2rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+  }
+  
+  .book .row form .inputBox{
+    padding:.5rem 0;
+  }
+  
+  .book .row form .inputBox input,select{
+    width:100%;
+    padding: .5rem !important;
+    border:.1rem solid rgba(0,0,0,.1);
+    font-size: 1.5rem !important;
+    color:#333 !important;
+    text-transform: none;
+    border-radius: 0.5rem;
+  }
+  .book .row form .inputBox h3{
+    font-size: 1.5rem !important;
+    padding:0.7rem 0 !important;
+    color:#666;
+  }
+  .book .row form .inputBox h2{
+    padding:0.7rem 0 !important;
+    color:#666;
+  }
+
+  .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background: orange;
+    color:#fff;
+    padding:.8rem 3rem;
+    border:.2rem solid orange;
+    cursor: pointer;
+    font-size: 1.7rem;
+  }
+  
+  .btn:hover{
+    background:rgba(255, 165, 0,.2);
+    color:var(--orange);
+  }
+  .book  .row .inputBox h2 {
+    width:50%;
+    padding:3% 0;
+    color: rgb(122, 122, 122);
+    font-size: 1em;
+  }
+  .hotel-info{
+    margin-top: 10px !important;
+  }
+  .box-container .container{
+    height: 620px !important;
+  }
+  .hotel-info .location i{
+    color: blue;
+    padding: 5px;
+  }
+  .hotel-info .bonus p{
+    border: 1px dotted lightslategray;
+    padding: 3px;
+    margin: 5px 7px 5px 0;
+  }
+  .hotel-info .near i{
+    color: lightskyblue;
+  }
+  .hotel-info .capacity i{
+    color:chartreuse;
+  }
+  .hotel-info .note i{
+    color: gray;
+    padding: 5px;
+  }
+  .hotel-info .price{
+    position: static !important;
+    border-top:1px dotted #666;
+    margin: 5px;
+  }
+  .hotel-info .price .old{
+    color: black;
+    text-decoration:line-through;
+    font-weight: 100;
+    font-size: .8em;
+    padding: 2px;
+    margin-left: 5px;
+  }
+  .hotel-info .price .new{
+    font-size: 1.1em;
+    padding: 0;
+    margin: 0;
+  }
+  .hotel-info .price .discount{
+    color: #fff;
+    background-color: red;
+    display: inline;
+    font-size: 0.7em;
+    padding:15px 5px;
+    border-radius: 50px 50px 50px 0;
+    position: absolute;
+    left: 220px;
+    bottom: 20px;
+    animation: dis 0.7s infinite;
+  }
+  .book-hotel{
+    margin-left: 10px !important;
+    border: 2px solid black;
+  }
+  @keyframes dis{
+    0%{
+      background-color: rgb(255, 123, 0);
+    }
+    30%{
+      background-color: rgb(255, 76, 53);
+    }
+    70%{
+      background-color: rgb(255, 183, 0);
+    }
+  }
+  @media screen and (max-width: 900px){
+    .book .row
+    {
+        margin:0;
+        width:100%;
+    }
+}

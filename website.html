@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Vũng Tàu Travel</title>
+        <meta http-equiv="refresh" content="600">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='travelwebsite.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href="header & footer\travelwebsite-h&f.css">
+        <link rel='stylesheet' type='text/css' media='only screen and (max-width: 1050px)' href='responsive.css'>
+        <link rel='stylesheet' type='text/css' media='only screen and (max-width: 1050px)' href='header & footer\responsive-h&f.css'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="travelwebsite.js"></script>
+        <script type="text/javascript" src="header & footer\travelwebsite-h&f.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="https://i.pinimg.com/originals/4a/a5/34/4aa534605d1afc465c5bdc5dd80f1ecb.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    </head>
+    <body>
+        <!--loadscript-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!--loadscript-->
+        <header>
+            <div id="home" class="flex">
+                <div id="logo-header" class="logo inline"><img src="img/logo.png" alt="logo"></div>
+                <div id="title-header" class="title inline"><h1 title="Vũng Tàu Travel" class="inline">Vung Tau Travel</h1></div>
+                <div id="login-header" class="login inline">
+                    <div class="see inline"><a title="Đăng ký"; href="pages/Register/register.html">Đăng ký</a></div>
+                    <pre style="font-size:1.4em; padding: 5px;" class="inline">/</pre>
+                    <div class="see inline">
+                        <button onclick="togglemenu()" class="login-button" title="Đăng nhập">Đăng nhập
+                            <i id="login-icon" class="fa-solid fa-user"></i>
+                            <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/3/393c6a1dee81cd3dc84df59672d43edb.svg"/>
+                        </button>
+                    </div>
+                </div>     
+                <div class="search inline">
+                    <form>
+                        <input id="box" aria-expanded="false" title="Nhập" type="search" placeholder="Nhập nơi muốn đến..."/>
+                        <button id="search" title="Tìm" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <p title="TÌm kiếm" onclick="searchbox()" id="search-button" class="responsive"><i class="fa-solid fa-magnifying-glass"></i></p>
+                    </form>
+                </div>
+            </div> 
+        </header>
+        <div id="login-menu">
+            <div class="lmw">
+                <h4>Đăng nhập tài khoản</h4>
+                <div onclick="removemenu()" role="button" id="lm-button"><button type="button"><i class="fa-solid fa-xmark"></i></button></div>
+                <div class="lmc">
+                    <form> 
+                        <div class="label"><label for="email">Email</label></div>
+                        <div class="input email"><input id="email" type="email" name="email"></div>
+                        <div id="error-email">Vui lòng nhập email của bạn</div>
+                    </form>
+                </div>
+                <div class="lmc">
+                    <form>
+                        <div class="label"><label for="password">Mật khẩu</label></div>
+                        <div class="input password"><input id="password" type="password" name="password"></div>
+                        <div id="error-password">Vui lòng nhập mật khẩu của bạn</div>
+                    </form>
+                    <a href="">Quên mật khẩu</a>
+                </div>
+                <div>
+                    <button id="sign" type="submit">Đăng nhập</button>
+                    <p class="inline">Bạn chưa có tài khoản?<a href="pages/Register/register.html">Đăng ký</a></p>
+                </div>
+            </div>
+            <div class="social-lmc">
+                <div class="or">Hoặc đăng nhập bằng:</div>
+                <div class="social-signin flex">
+                    <div class="fb signin flex">
+                        <a class="flex" href="">
+                            <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/5/5f2c27c2674ad4a01c1cd42b2e0884aa.svg"/>
+                            <div>Facebook</div>
+                        </a>
+                    </div>
+                    <div class="gg signin flex">
+                        <a class="flex" href="">
+                            <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/c/c6bf231775a1d162b567c0882e1d7e3b.svg"/>
+                            <div>Google</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="header-menu" class="sticky">
+            <div class="menu">
+                <nav class="flex">
+                    <div onclick="show()" id="openMenu" role="button" aria-label="Hamburger Menu" class="menu-button flex"><button class="menu-button" type="button"><i class="fa-solid fa-bars"></i></button></div>
+                    <ul class="nav flex">
+                        <li><a href="">Trang chủ</a></li>
+                        <li><a href="pages\Introduce\introduce.html">Giới thiệu</a></li>
+                        <li><a href="pages\Tour\tour.html">Tour du lịch</a></li>
+                        <li><a href="pages\Accommodation\accommodation.html">Khách sạn</a></li>
+                        <li><a href="pages\Vehicles\vehicles.html">Thuê xe</a></li>
+                        <li><a href="pages/Contact/contact.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="mainMenu">
+            <div class="background" id="background"></div>
+            <div onclick="hide()" role="button" class="closeMenu"><button id="closeMenu" type="button"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="options flex" id="options">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                    <li><a href=""><i class="fa-solid fa-table-list"></i>Đơn đặt hàng của tôi</a></li>
+                    <li><a href=""><i class="fa-solid fa-envelope"></i>Hộp thư của tôi</a></li>
+                    <li><a href=""><i class="fa-solid fa-clipboard-check"></i>Đã lưu</a></li>
+                    <li><a href=""><i class="fa-solid fa-phone"></i>Liên lạc với chúng tôi</a></li>
+                    <li><a href=""><i class="fa-solid fa-circle-question"></i>Trung tâm trợ giúp</a></li>
+                    <li><a href=""><i class="fa-solid fa-handshake"></i>Trở thành đối tác với chúng tôi</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--home section start-->
+        <section class="home" id="home">
+            <div class="control">
+                <div class="home-pictures"><img src="img/image.jpg" alt="home pic"></div>
+            </div>
+            <div class="home-content">
+                <h3>Du Lịch mọi lúc mọi nơi</h3>
+                <p>Cùng đến với Vũng Tàu Travel khám phá thế giới<p>
+                <a href="#" class="click-box">Khám phá thêm</a>
+            </div>
+        </section>
+        
+        <!--home section end-->
+        <!--slideshow start-->
+        <br>
+        <!--slideshow end-->
+        <!--section 1-->
+        <section class="wrapper">
+            <div id="title"><h1>Điểm đến yêu thích</h1></div>
+            <div class="slider">
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://toplist.vn/images/800px/tuong-chua-kito-cuu-the-o-rio-de-janerio-brazil-136155.jpg);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Tượng Chúa Kito Vua <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="aboutplace">[Giới thiệu] Tượng Chúa Kitô Vua là bức tượng cháu Giêsu được đặt trên đỉnh núi. Là nơi bạn có thể chụp hình sống ảo với khung cảnh bao quát cả bầu trời.</span>
+                        </div>
+                        <div class="showMore"><p class="showMore text"><a href="">Xem thêm</a></p></div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://thuexedulichtamthanh.com/wp-content/uploads/2016/11/ngon-hai-dang-vung-tau.jpg);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Ngọn hải đăng Vũng Tàu <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="aboutplace">[Giới thiệu] Hải đăng Vũng Tàu là một trong những hải đăng cổ xưa nhất Việt Nam và Đông Nam Á được xem như là biểu tượng của thành phố biển Vũng Tàu.</span>
+                        </div>
+                        <div class="showMore"><p class="showMore text"><a href="">Xem thêm</a></p></div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/10/1-25.png);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Mũi Nghinh Phong <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="aboutplace">[Giới thiệu] Mũi Nghinh Phong là một mũi đất dài nhô ra biển toạ lạc tại phía Nam bán đảo Vũng Tàu sở hữu cảnh quanh đắc địa với "trước mặt là biển, sau lưng là núi".</span>
+                        </div>
+                        <div class="showMore"><p class="showMore text"><a href="">Xem thêm</a></p></div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(http://vyctravel.com/libs/upload/ckfinder/images/H%E1%BB%93%20c%E1%BB%91c6_800x533.jpg);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Biển Hồ Cốc <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="aboutplace">[Giới thiệu] Biển Hồ Cốc với bãi cát mịn và mặt biển xanh rì. Dọc bờ biển có khá nhiều ghềnh đá lớn nhấp nhô, tạo nên nét sinh động khá thú vị cho bãi biển xinh đẹp này.</span>
+                        </div>
+                        <div class="showMore"><p class="showMore text"><a href="">Xem thêm</a></p></div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://bietthubien.com/storage/2019/09/hin-anh-reivew-bai-truoc-hay-bai-sau-vung-tau-dep-hon-2.jpg);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Bãi Trước Vũng Tàu <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="aboutplace">[Giới thiệu] Bãi Trước Vũng Tàu có hình thù như nửa vầng trăng, một bên giáp với trung tâm thành phố và núi đồi, một bên sát biển và thuộc một trong hai bãi biển lớn nhất của trung tâm Vũng Tàu.</span>
+                        </div>
+                        <div class="showMore"><p class="showMore text"><a href="">Xem thêm</a></p></div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://go2joy.s3.ap-southeast-1.amazonaws.com/blog/wp-content/uploads/2022/04/02000825/du-lich-long-hai-vung-tau.jpg);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Biển Long Hải <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="aboutplace">[Giới thiệu] Nơi đây quyến rũ bởi khung cảnh thiên nhiên nên thơ, hữu tình, bờ biển chạy dài uốn lượn sau dãy núi Minh Đạm hùng vỹ, với bờ cát mịn màng cùng làn nước trong xanh tuyệt đẹp.</span>
+                        </div>
+                        <div class="showMore"><p class="showMore text"><a href="">Xem thêm</a></p></div>
+                    </div>
+                </div>
+                <button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'>a</i></button>
+                <button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'>b</i></button>
+            </div>
+        </section>
+        <!--section 1-end-->
+        <br>
+        <!-- section 2 start -->
+        <section class="wrapper">
+            <div id="title" class="hotel"><h1>Khách sạn giá sốc</h1></div>
+            <div class="slider">
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://www.chudu24.com/wp-content/uploads/2016/12/khach-san-imperial-vung-tau.jpg);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Khách Sạn & Nghỉ Dưỡng Imperial <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="quality" title="5 star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span class="place"><i class="fa-solid fa-location-dot"></i>159 Thùy Vân, Thắng Tam, Vũng Tàu, Việt Nam</span>
+                            <span class="old-price">5.500.000 VND</span>
+                            <span class="price">3.900.000 VND</span>
+                        </div>
+                        <div class="showMore book"><p class="text"><a href="">Đặt phòng ngay</a></p></div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://th.bing.com/th/id/OIP.52VSaPj2kfgDG_nD0I2AiQHaEK?pid=ImgDet&rs=1);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">ibis Styles Vũng Tàu <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="quality" title="3 star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span class="place"><i class="fa-solid fa-location-dot"></i>117 Thùy Vân, Thắng Tam, Vũng Tàu, Việt Nam</span>
+                            <span class="old-price">3.200.000 VND</span>
+                            <span class="price">1.850.000 VND</span>
+                        </div>
+                        <div class="showMore book"><p class="text"><a href="">Đặt phòng ngay</a></p></div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://fantasea.vn/wp-content/uploads/2021/03/Kh%C3%A1ch-s%E1%BA%A1n-Premier-Pearl-V%C5%A9ng-T%C3%A0u-12.jpg);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Khách sạn Premier Pearl Vũng Tàu <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="quality" title="4 star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span class="place"><i class="fa-solid fa-location-dot"></i>69 Thùy Văn, Phường 2, Vũng Tàu, Việt Nam</span>
+                            <span class="old-price">3.400.000 VND</span>
+                            <span class="price">1.899.000 VND</span>
+                        </div>
+                        <div class="showMore book"><p class="text"><a href="">Đặt phòng ngay</a></p></div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://cdn.ostrovok.ru/t/1200x616/content/22/d6/22d60ce908d96b682570dbbde10b489d785992ae.jpeg);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Khách sạn Malibu <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="quality" title="4,5 star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i></span>
+                            <span class="place"><i class="fa-solid fa-location-dot"></i>263 Lê Hồng Phong, Thắng Tam, Vũng Tàu, Việt Nam</span>
+                            <span class="old-price">5.000.000 VND</span>
+                            <span class="price">3.650.000 VND</span>
+                        </div>
+                        <div class="showMore book"><p class="text"><a href="">Đặt phòng ngay</a></p></div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://pix8.agoda.net/hotelImages/16296821/-1/cad81cff62dac730ae6da3d1353204f7.jpg?ca=20&ce=1&s=1024x768);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">The Cap Hotel <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="quality" title="4 star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i></span>
+                            <span class="place"><i class="fa-solid fa-location-dot"></i>01 Thi Sách, Thắng Tam, Vũng Tàu, Việt Nam</span>
+                            <span class="old-price">4.000.000 VND</span>
+                            <span class="price">2.399.000 VND</span>
+                        </div>
+                        <div class="showMore book"><p class="text"><a href="">Đặt phòng ngay</a></p></div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/254541907.jpg?k=ee7d57ee245d1d1a3ea4534f725eaeb97a5e00b921f3d792746b01b65edb1a23&o=);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Fusion Suites Vũng Tàu <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="quality" title="4 star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span class="place"><i class="fa-solid fa-location-dot"></i>02 Trương Công Định, Phường 2, Vũng Tàu, Việt Nam</span>
+                            <span class="old-price">3.500.000 VND</span>
+                            <span class="price">2.225.000 VND</span>
+                        </div>
+                        <div class="showMore book"><p class="text"><a href="">Đặt phòng ngay</a></p></div>
+                    </div>
+                </div>
+                <button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'>a</i></button>
+                <button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'>b</i></button>
+            </div>
+        </section>
+        <!--section 2-end-->
+        <br>
+        <!-- section 3 start -->
+        <section class="wrapper">
+            <div id="title" class="tour"><h1>Tour Hot</h1></div>
+            <div class="slider">
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://photo-cms-baodauthau.zadn.vn/w750/Uploaded/2022/ovhpuht/2022_08_08/17-5a-6328.jpg);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Tour Côn Đảo 2 ngày 2 đêm <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="long"><i class="fa-solid fa-clock"></i>2 ngày 2 đêm</span>
+                            <span class="vehicle inline"><i title="máy bay" class="fa-solid fa-plane-up"></i></span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Côn Đảo</span>
+                            <span class="date"><i class="fa-solid fa-calendar"></i>17/8</span>
+                            <span class="old-price">4.200.000 VND</span>
+                            <span class="price">3.699.000 VND</span>
+                        </div>
+                        <div class="showMore book trh">
+                            <p class="detail"><button>Xem thêm</button></p>
+                            <p class="text"><a href="">Đặt tour</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://doanhnhanplus.vn/wp-content/uploads/2019/12/dnp-tau-cao-toc-can-tho-con-dao-1.jpg);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Tour Côn Đảo 3 ngày 2 đêm <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="long"><i class="fa-solid fa-clock"></i>3 ngày 2 đêm</span>
+                            <span class="vehicle inline"><i title="xe khách" class="fa-solid fa-bus"></i><i  title="tàu" class="fa-solid fa-ship"></i></span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Côn Đảo</span>
+                            <span class="date"><i class="fa-solid fa-calendar"></i>15/8</span>
+                            <span class="old-price">3.900.000 VND</span>
+                            <span class="price">2.999.000 VND</span>
+                        </div>
+                        <div class="showMore book trh">
+                            <p class="detail"><button>Xem thêm</button></p>
+                            <p class="text"><a href="">Đặt tour</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://th.bing.com/th/id/OIP.CgSp5QXVzaJRZSIgtYxN-QHaEA?pid=ImgDet&rs=1);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Tour Long Hải 2 ngày 1 đêm <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="long"><i class="fa-solid fa-clock"></i>2 ngày 1 đêm</span>
+                            <span class="vehicle inline"><i title="xe khách" class="fa-solid fa-bus"></i><i  title="xe hơi" class="fa-solid fa-car"></i></span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Long Hải</span>
+                            <span class="date"><i class="fa-solid fa-calendar"></i>Hằng ngày</span>
+                            <span class="old-price">1.800.000 VND</span>
+                            <span class="price">1.500.000 VND</span>
+                        </div>
+                        <div class="showMore book trh">
+                            <p class="detail"><button>Xem thêm</button></p>
+                            <p class="text"><a href="">Đặt tour</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://hcmcpianofestival.com/wp-content/uploads/1461743561_du-lich-vung-tau-1.jpg);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Tour Vũng Tàu giá rẻ <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="long"><i class="fa-solid fa-clock"></i>2 ngày 1 đêm</span>
+                            <span class="vehicle inline"><i title="xe khách" class="fa-solid fa-bus"></i><i  title="xe hơi" class="fa-solid fa-car"></i></span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Bãi Trước và Bãi Sau</span>
+                            <span class="date"><i class="fa-solid fa-calendar"></i>Hằng ngày</span>
+                            <span class="old-price">2.000.000 VND</span>
+                            <span class="price">1.800.000 VND</span>
+                        </div>
+                        <div class="showMore book trh">
+                            <p class="detail"><button>Xem thêm</button></p>
+                            <p class="text"><a href="">Đặt tour</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://th.bing.com/th/id/OIP.ibdtt5F_rgdP_dz6vydvVAHaFj?pid=ImgDet&rs=1);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Tour Hồ Tràm 2 ngày 1 đêm <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="long"><i class="fa-solid fa-clock"></i>2 ngày 1 đêm</span>
+                            <span class="vehicle inline"><i title="xe khách" class="fa-solid fa-bus"></i><i  title="xe hơi" class="fa-solid fa-car"></i></span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Hồ Tràm</span>
+                            <span class="date"><i class="fa-solid fa-calendar"></i>15 hằng tháng</span>
+                            <span class="old-price">2.250.000 VND</span>
+                            <span class="price">1.999.000 VND</span>
+                        </div>
+                        <div class="showMore book trh">
+                            <p class="detail"><button>Xem thêm</button></p>
+                            <p class="text"><a href="">Đặt tour</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="box-container">
+                        <div class="imgHolder" style="background-image: url(https://motogo.vn/wp-content/uploads/2020/02/suoi-nuoc-nong-binh-chau-min.jpg);"></div>
+                        <div class="textwrap">
+                            <span class="nameplace">Tour Vũng Tàu: Suối nước nóng Bình Châu <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span class="long"><i class="fa-solid fa-clock"></i>1 ngày 1 đêm</span>
+                            <span class="vehicle inline"><i title="xe khách" class="fa-solid fa-bus"></i><i  title="xe hơi" class="fa-solid fa-car"></i></span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Suối nước nóng Bình Châu</span>
+                            <span class="date"><i class="fa-solid fa-calendar"></i>Hằng ngày</span>
+                            <span class="old-price">2.370.000 VND</span>
+                            <span class="price">2.099.000 VND</span>
+                        </div>
+                        <div class="showMore book trh">
+                            <p class="detail"><button>Xem thêm</button></p>
+                            <p class="text"><a href="">Đặt tour</a></p>
+                        </div>
+                    </div>
+                </div>
+                <button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'>a</i></button>
+                <button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'>b</i></button>
+            </div>
+        </section>
+        <!--section 3-end-->
+        <br><br><br>
+        <!-- footer -->
+        <footer class="flex">
+            <div class="container flex">
+                <div class="content contactus">
+                    <h3>Liên hệ</h3>
+                    <ul>
+                        <li>CÔNG TY THƯƠNG MẠI DU LỊCH VŨNG TÀU TRAVEL</li>
+                        <li>Trụ sở: 371 Nguyễn Kiệm, phường 3, quận Gò vấp, TP.HCM</li>
+                        <li>Tổng đài tư vấn mua hàng: <b>19003851</b></li>
+                        <li>Tổng đài dịch vụ vận chuyển: <b>19005341</b></li>
+                        <li>Email: <a href="mailto:vungtautravel@gmail.com">vungtautravel@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="content about">
+                    <h3>Theo dõi chúng tôi trên</h3>
+                    <ul class="social-icon">
+                        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                        <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                        <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i>Youtube</a></li>
+                    </ul>
+                </div>
+                <div class="content links">
+                    <h3>Đường Dẫn</h3>
+                    <ul class="link">
+                        <li><a href="">Trang Chủ</a></li>
+                        <li><a href="">Về Chúng Tôi</a></li>
+                        <li><a href="">Thông Tin Liên Lạc</a></li>
+                        <li><a href="">Dịch Vụ</a></li>
+                        <li><a href="">Điều Kiện Chính Sách</a></li>
+                    </ul>                    
+                </div>
+                <div class="content help">
+                    <h3>Trợ giúp</h3>
+                    <ul class="link">
+                        <li><a href="">Trung tâm trợ giúp</a></li>
+                        <li><a href="">Hình thức thanh toán</a></li>
+                        <li><a href="">Hướng dẫn đăng nhập</a></li>
+                        <li><a href="">Quy định sử dụng </a></li>
+                        <li><a href="">Chính sách bảo mật</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                    </ul>                    
+                </div>
+            </div>
+        </foorter>
+        <!-- footer -->
+        <div onclick="scrollToTop()" role="button" id="return" title="Trở về đầu trang"><button type="button">^</button></div>
+    </body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Vũng Tàu Travel</title>
+        <meta http-equiv="refresh" content="600">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='vehicles.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href="../../header & footer/travelwebsite-h&f.css">
+        <link rel="stylesheet" type="text/css" href="../Tour/tour.css">
+        <link rel='stylesheet' type='text/css' media='only screen and (max-width: 1050px)' href='../../header & footer/responsive-h&f.css'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="vehicles.js"></script>
+        <script type="text/javascript" src="../../header & footer/travelwebsite-h&f.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="https://i.pinimg.com/originals/4a/a5/34/4aa534605d1afc465c5bdc5dd80f1ecb.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    </head>
+    <body>
+        <!--loadscript-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!--loadscript-->
+        <header>
+            <div id="home" class="flex">
+                <div id="logo-header" class="logo inline"><img src="../../img/logo.png" alt="logo"></div>
+                <div id="title-header" class="title inline"><h1 title="Vũng Tàu Travel" class="inline">Vung Tau Travel</h1></div>
+                <div id="login-header" class="login inline">
+                    <div class="see inline"><a title="Đăng ký"; href="../Register/register.html">Đăng ký</a></div>
+                    <pre style="font-size:1.4em; padding: 5px;" class="inline">/</pre>
+                    <div class="see inline">
+                        <button onclick="togglemenu()" class="login-button" title="Đăng nhập">Đăng nhập
+                            <i id="login-icon" class="fa-solid fa-user"></i>
+                            <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/3/393c6a1dee81cd3dc84df59672d43edb.svg"/>
+                        </button>
+                    </div>
+                </div>     
+                <div class="search inline">
+                    <form>
+                        <input id="box" aria-expanded="false" title="Nhập" type="search" placeholder="Nhập nơi muốn đến..."/>
+                        <button id="search" title="Tìm" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <p title="TÌm kiếm" onclick="searchbox()" id="search-button" class="responsive"><i class="fa-solid fa-magnifying-glass"></i></p>
+                    </form>
+                </div>
+            </div> 
+        </header>
+        <div id="login-menu">
+            <div class="lmw">
+                <h4>Đăng nhập tài khoản</h4>
+                <div onclick="removemenu()" role="button" id="lm-button"><button type="button"><i class="fa-solid fa-xmark"></i></button></div>
+                <div class="lmc">
+                    <form> 
+                        <div class="label"><label for="email">Email</label></div>
+                        <div class="input email"><input id="email" type="email" name="email"></div>
+                        <div id="error-email">Vui lòng nhập email của bạn</div>
+                    </form>
+                </div>
+                <div class="lmc">
+                    <form>
+                        <div class="label"><label for="password">Mật khẩu</label></div>
+                        <div class="input password"><input id="password" type="password" name="password"></div>
+                        <div id="error-password">Vui lòng nhập mật khẩu của bạn</div>
+                    </form>
+                    <a href="">Quên mật khẩu</a>
+                </div>
+                <div>
+                    <button id="sign" type="submit">Đăng nhập</button>
+                    <p class="inline">Bạn chưa có tài khoản?<a href="../Register/register.html">Đăng ký</a></p>
+                </div>
+            </div>
+            <div class="social-lmc">
+                <div class="or">Hoặc đăng nhập bằng:</div>
+                <div class="social-signin flex">
+                    <div class="fb signin flex">
+                        <a class="flex" href="">
+                            <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/5/5f2c27c2674ad4a01c1cd42b2e0884aa.svg"/>
+                            <div>Facebook</div>
+                        </a>
+                    </div>
+                    <div class="gg signin flex">
+                        <a class="flex" href="">
+                            <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/c/c6bf231775a1d162b567c0882e1d7e3b.svg"/>
+                            <div>Google</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="header-menu" class="sticky">
+            <div class="menu">
+                <nav class="flex">
+                    <div onclick="show()" id="openMenu" role="button" aria-label="Hamburger Menu" class="menu-button flex"><button class="menu-button" type="button"><i class="fa-solid fa-bars"></i></button></div>
+                    <ul class="nav flex">
+                        <li><a href="../../website.html">Trang chủ</a></li>
+                        <li><a href="../Introduce/introduce.html">Giới thiệu</a></li>
+                        <li><a href="../Tour/tour.html">Tour du lịch</a></li>
+                        <li><a href="../Accommodation/accommodation.html">Khách sạn</a></li>
+                        <li><a href="">Thuê xe</a></li>
+                        <li><a href="../Contact/contact.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="mainMenu">
+            <div class="background" id="background"></div>
+            <div onclick="hide()" role="button" class="closeMenu"><button id="closeMenu" type="button"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="options flex" id="options">
+                <ul>
+                    <li><a href="../../website.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                    <li><a href=""><i class="fa-solid fa-table-list"></i>Đơn đặt hàng của tôi</a></li>
+                    <li><a href=""><i class="fa-solid fa-envelope"></i>Hộp thư của tôi</a></li>
+                    <li><a href=""><i class="fa-solid fa-clipboard-check"></i>Đã lưu</a></li>
+                    <li><a href=""><i class="fa-solid fa-phone"></i>Liên lạc với chúng tôi</a></li>
+                    <li><a href=""><i class="fa-solid fa-circle-question"></i>Trung tâm trợ giúp</a></li>
+                    <li><a href=""><i class="fa-solid fa-handshake"></i>Trở thành đối tác với chúng tôi</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--section 1 start-->
+        <section class="book mar">
+            <div id="title"><h1>Đặt Xe</h1></div>
+            <div id="book" class="row">
+                
+                <form action="">
+                    <div class="inputBox">
+                        <h3>Nơi đến <i class="fa-solid fa-location-dot"></i></h3>
+                        <select id="tours" name="tours" onchange="destination()">
+                            <option disabled selected>Chọn nơi muốn đến</option>
+                            <option value="0">Vũng Tàu</option>
+                            <option value="1">Côn Đảo</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <h3>Loại xe / loại xe<i title="máy bay" class="fa-solid fa-plane-up"></i><i title="trực thăng" class="fa-solid fa-helicopter"></i><i title="xe khách" class="fa-solid fa-bus"></i><i  title="xe hơi" class="fa-solid fa-car"></i> </h3>
+                        <select id="types" name="types" onchange="book()">
+                            <option class="hide-option" disabled selected>Chọn loại vé / loại xe</option>
+                            <option class="hide-option" value="0">Xe 29 chỗ (Vé 1 chiều): 150,000đ</option>
+                            <option class="hide-option" value="1">Xe 29 chỗ (Vé khứ hồi): 210,000đ</option>
+                            <option class="hide-option" value="2">Xe 45 chỗ (Vé 1 chiều): 145,000đ</option>
+                            <option class="hide-option" value="3">Xe 45 chỗ (Vé khứ hồi): 205,000đ</option>
+                            <option class="hide-option" value="4">Xe giường nằm (Vé 1 chiều): 200,000đ</option>
+                            <option class="hide-option" value="5">Xe giường nằm (Vé khứ hồi): 250,000đ</option>
+                            <option class="hide-option" disabled>-----------(Xe thuê theo ngày ↓)-----------</option>
+                            <option class="hide-option" value="6">Xe 4 chỗ : 1,000,000/ngày</option>
+                            <option class="hide-option" value="7">Xe 7 chỗ : 1,400,000/ngày</option>
+                            <option class="hide-option" value="8">Xe 16 chỗ : 1,800,000/ngày</option>
+                            <option class="hide-option1" disabled>-----------(Vé ra Côn Đảo ↓)-----------</option>
+                            <option class="hide-option1" value="9">Vé tàu ra côn đảo (Vé 1 chiều): 800,000đ</option>
+                            <option class="hide-option1" value="10">Vé tàu ra côn đảo (Vé khứ hồi): 1,200,000đ</option>
+                            <option class="hide-option1" value="11">Vé trực thăng ra côn đảo (Vé 1 chiều): 2,000,000đ</option>
+                            <option class="hide-option1" value="12">Vé trực thăng ra côn đảo (Vé khứ hồi): 2,100,000đ</option>
+                            <option class="hide-option1" value="13">Vé máy bay ra côn đảo (Vé 1 chiều): 2.000,000đ</option>
+                            <option class="hide-option1" value="14">Vé máy bay ra côn đảo (Vé khứ hồi): 3,200,000đ</option>
+                        </select>
+                    </div>
+                    <div class="inputBox" id= "name-number" style = "display: none;">
+                        <h3 id="number-of"></h3>
+                        <input id="num" type="number" min="1" value="1" onchange="book()">
+                    </div>
+                    <div class="inputBox" style ="display: flex;" style="padding:0.5rem 0;">
+                        <h3 style="width:110px; padding:1rem 0;">Họ và tên</h3>
+                        <input id="name" type="text" placeholder="Họ và tên" style = "margin:0 15px;">
+                        <h3 style="width:180px; padding:1rem 0;">Số điện thoại</h3>
+                        <input id="phone" type="number" placeholder="Số điện thoại" style = "margin-left: 15px;">
+                    </div>
+                    <h3 style="color:rgb(1, 171, 21);">Tổng tiền (Số vé/ngày x giá xe): <span id="total"></span></h3>
+                    <div id="incorrect" style="color:red;display:none;margin-top:10px;">Bạn nhập không đủ thông tin</div>
+                    <input type="button" class="btn" value="Đặt Ngay" onclick="bill()">
+                </form>
+            </div>
+        
+        </section>
+        <!--section 1 end-->
+        <section class="mar">
+            <div id="title"><h1>Đặt xe theo ghế</h1></div>
+            <div class="recommend">
+                <div class="box-container">
+                    <div class="container">
+                        <div class="tour-img" style="background-image: url(https://thuexekhach.com/wp-content/uploads/2020/02/thue%CC%82-xe-29-cho%CC%82%CC%83-%C4%91i-Vu%CC%83ng-Ta%CC%80u-1024x768.jpg);"></div>
+                        <div class="tour-info vehicle-info">
+                            <span class="tourname">Xe 29 chỗ</span>                           
+                            <span class="start"><i class="fa-solid fa-location-dot"></i>Khởi hành: Hồ Chí Minh</span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Điểm đến: Vũng Tàu</span>
+                            <span class="note textbox"><i style="color:lightblue;" class="fa-solid fa-note-sticky iStyle"></i>Trẻ em 1-5 tuổi được đi miễn phí</span>
+                            <span class="vehicle-prices">
+                                <span>
+                                    <p class="ticket">Vé 1 chiều:</p>
+                                    <p class="price">150.000 VND</p>                                    
+                                </span>  
+                                <span>
+                                    <p class="ticket">Vé khứ hồi:</p>
+                                    <p class="price">210.000 VND</p>                                    
+                                </span>  
+                            </span>                          
+                        </div>
+                        <div class="booked"><button class="book-tour">Đặt xe</button></div>
+                    </div>
+                </div>
+                <div class="box-container">
+                    <div class="container">
+                        <div class="tour-img" style="background-image: url(https://thuexekhach.com/wp-content/uploads/2020/02/thue%CC%82-xe-45-cho%CC%82%CC%83-%C4%91i-Vu%CC%83ng-Ta%CC%80u-1024x768.jpg);"></div>
+                        <div class="tour-info vehicle-info">
+                            <span class="tourname">Xe 45 chỗ</span>                           
+                            <span class="start"><i class="fa-solid fa-location-dot"></i>Khởi hành: Hồ Chí Minh</span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Điểm đến: Vũng Tàu</span>
+                            <span class="note textbox"><i style="color:lightblue;" class="fa-solid fa-note-sticky iStyle"></i>Trẻ em 1-5 tuổi được đi miễn phí</span>
+                            <span class="vehicle-prices">
+                                <span>
+                                    <p class="ticket">Vé 1 chiều:</p>
+                                    <p class="price">145.000 VND</p>                                    
+                                </span>  
+                                <span>
+                                    <p class="ticket">Vé khứ hồi:</p>
+                                    <p class="price">205.000 VND</p>                                    
+                                </span>  
+                            </span>                          
+                        </div>
+                        <div class="booked"><button class="book-tour">Đặt xe</button></div>
+                    </div>
+                </div>
+                <div class="box-container">
+                    <div class="container">
+                        <div class="tour-img" style="background-image: url(https://th.bing.com/th/id/R.3630d450919a72847c51364d26d8463f?rik=y4FwR7znAJCt%2bw&pid=ImgRaw&r=0);"></div>
+                        <div class="tour-info vehicle-info">
+                            <span class="tourname">Xe giường nằm</span>                           
+                            <span class="start"><i class="fa-solid fa-location-dot"></i>Khởi hành: Hồ Chí Minh</span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Điểm đến: Vũng Tàu</span>
+                            <span class="note textbox"><i style="color:lightblue;" class="fa-solid fa-note-sticky iStyle"></i>Trẻ em 1-5 tuổi được đi miễn phí</span>
+                            <span class="vehicle-prices">
+                                <span>
+                                    <p class="ticket">Vé 1 chiều:</p>
+                                    <p class="price">200.000 VND</p>                                    
+                                </span>  
+                                <span>
+                                    <p class="ticket">Vé khứ hồi:</p>
+                                    <p class="price">250.000 VND</p>                                    
+                                </span>  
+                            </span>                          
+                        </div>
+                        <div class="booked"><button class="book-tour">Đặt xe</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mar">
+            <div id="title"><h1>Đặt xe 4 - 16 chỗ theo ngày</h1></div>
+            <div class="recommend">
+                <div class="box-container">
+                    <div class="container">
+                        <div class="tour-img" style="background-image: url(https://thuexekhach.com/wp-content/uploads/2020/02/Thue%CC%82-xe-4-cho%CC%82%CC%83-%C4%91i-Vu%CC%83ng-Ta%CC%80u-1024x768.jpg);"></div>
+                        <div class="tour-info vehicle-info">
+                            <span class="tourname">Xe 4 chỗ</span>                           
+                            <span class="start"><i class="fa-solid fa-location-dot"></i>Khởi hành: Hồ Chí Minh</span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Điểm đến: Vũng Tàu</span>
+                            <span class="note textbox"><i style="color:lightblue;" class="fa-solid fa-note-sticky iStyle"></i>Trẻ em 1-5 tuổi được đi miễn phí</span>
+                            <span class="vehicle-prices">
+                                <span>
+                                    <p class="ticket">Thuê 1 ngày:</p>
+                                    <p class="price">1.000.000 VND</p>                                    
+                                </span>   
+                            </span>                          
+                        </div>
+                        <div class="booked"><button class="book-tour">Đặt xe</button></div>
+                    </div>
+                </div>
+                <div class="box-container">
+                    <div class="container">
+                        <div class="tour-img" style="background-image: url(https://thuexekhach.com/wp-content/uploads/2020/02/Thue%CC%82-xe-7-cho%CC%82%CC%83-%C4%91i-Vu%CC%83ng-Ta%CC%80u.jpg);"></div>
+                        <div class="tour-info vehicle-info">
+                            <span class="tourname">Xe 7 chỗ</span>                           
+                            <span class="start"><i class="fa-solid fa-location-dot"></i>Khởi hành: Hồ Chí Minh</span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Điểm đến: Vũng Tàu</span>
+                            <span class="note textbox"><i style="color:lightblue;" class="fa-solid fa-note-sticky iStyle"></i>Trẻ em 1-5 tuổi được đi miễn phí</span>
+                            <span class="vehicle-prices">
+                                <span>
+                                    <p class="ticket">Thuê 1 ngày:</p>
+                                    <p class="price">1.400.000 VND</p>                                    
+                                </span>   
+                            </span>                          
+                        </div>
+                        <div class="booked"><button class="book-tour">Đặt xe</button></div>
+                    </div>
+                </div>
+                <div class="box-container">
+                    <div class="container">
+                        <div class="tour-img" style="background-image: url(https://thuexekhach.com/wp-content/uploads/2020/02/thue%CC%82-xe-16-cho%CC%82%CC%83-%C4%91i-Vu%CC%83ng-Ta%CC%80u.jpg);"></div>
+                        <div class="tour-info vehicle-info">
+                            <span class="tourname">Xe 16 chỗ</span>                           
+                            <span class="start"><i class="fa-solid fa-location-dot"></i>Khởi hành: Hồ Chí Minh</span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Điểm đến: Vũng Tàu</span>
+                            <span class="note textbox"><i style="color:lightblue;" class="fa-solid fa-note-sticky iStyle"></i>Trẻ em 1-5 tuổi được đi miễn phí</span>
+                            <span class="vehicle-prices">
+                                <span>
+                                    <p class="ticket">Thuê 1 ngày:</p>
+                                    <p class="price">1.800.000 VND</p>                                    
+                                </span>
+                            </span>                          
+                        </div>
+                        <div class="booked"><button class="book-tour">Đặt xe</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mar">
+            <div id="title"><h1>Đặt vé ra Côn Đảo</h1></div>
+            <div class="recommend">
+                <div class="box-container">
+                    <div class="container">
+                        <div class="tour-img" style="background-image: url(https://vetaucondao.vn/wp-content/uploads/2022/06/Tau-cao-toc-Mai-Linh-Can-Tho-600x600.jpg);"></div>
+                        <div class="tour-info vehicle-info">
+                            <span class="tourname">Vé tàu ra Côn Đảo</span>                           
+                            <span class="start"><i class="fa-solid fa-location-dot"></i>Khởi hành: Vũng Tàu</span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Điểm đến: Côn Đảo</span>
+                            <span class="note textbox"><i style="color:lightblue;" class="fa-solid fa-note-sticky iStyle"></i>Trẻ em 1-5 tuổi được đi miễn phí</span>
+                            <span class="vehicle-prices">
+                                <span>
+                                    <p class="ticket">Vé 1 chiều:</p>
+                                    <p class="price">800.000 VND</p>                                    
+                                </span> 
+                                <span>
+                                    <p class="ticket">Vé khứ hồi:</p>
+                                    <p class="price">1.200.000 VND</p>                                    
+                                </span>
+                            </span>                          
+                        </div>
+                        <div class="booked"><button class="book-tour">Đặt vé</button></div>
+                    </div>
+                </div>
+                <div class="box-container">
+                    <div class="container">
+                        <div class="tour-img" style="background-image: url(https://vetaucondao.vn/wp-content/uploads/2019/04/Mi-1V.jpg);"></div>
+                        <div class="tour-info vehicle-info">
+                            <span class="tourname">Vé trực thăng ra Côn Đảo</span>                           
+                            <span class="start"><i class="fa-solid fa-location-dot"></i>Khởi hành: Vũng Tàu</span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Điểm đến: Côn Đảo</span>
+                            <span class="note textbox"><i style="color:lightblue;" class="fa-solid fa-note-sticky iStyle"></i>Trẻ em 1-3 tuổi được đi miễn phí</span>
+                            <span class="vehicle-prices">
+                                <span>
+                                    <p class="ticket">Vé 1 chiều:</p>
+                                    <p class="price">2.000.000 VND</p>                                    
+                                </span> 
+                                <span>
+                                    <p class="ticket">Vé khứ hồi:</p>
+                                    <p class="price">2.100.000 VND</p>                                    
+                                </span>
+                            </span>                          
+                        </div>
+                        <div class="booked"><button class="book-tour">Đặt vé</button></div>
+                    </div>
+                </div>
+                <div class="box-container">
+                    <div class="container">
+                        <div class="tour-img" style="background-image: url(https://vetaucondao.vn/wp-content/uploads/2019/03/May-bay-Con-Dao.jpg);"></div>
+                        <div class="tour-info vehicle-info">
+                            <span class="tourname">Vé máy bay ra Côn Đảo</span>                           
+                            <span class="start"><i class="fa-solid fa-location-dot"></i>Khởi hành: Hồ Chí Minh</span>
+                            <span class="place"><i class="fa-solid fa-location-crosshairs"></i>Điểm đến: Côn Đảo</span>
+                            <span class="note textbox"><i style="color:lightblue;" class="fa-solid fa-note-sticky iStyle"></i>Trẻ em 1-5 tuổi được đi miễn phí</span>
+                            <span class="vehicle-prices">
+                                <span>
+                                    <p class="ticket">Vé 1 chiều:</p>
+                                    <p class="price">2.000.000 VND</p>                                    
+                                </span> 
+                                <span>
+                                    <p class="ticket">Vé khứ hồi:</p>
+                                    <p class="price">3.200.000 VND</p>                                    
+                                </span>
+                            </span>                          
+                        </div>
+                        <div class="booked"><button class="book-tour">Đặt vé</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <footer class="flex">
+            <div class="container flex">
+                <div class="content contactus">
+                    <h3>Liên hệ</h3>
+                    <ul>
+                        <li>CÔNG TY THƯƠNG MẠI DU LỊCH VŨNG TÀU TRAVEL</li>
+                        <li>Trụ sở: 371 Nguyễn Kiệm, phường 3, quận Gò vấp, TP.HCM</li>
+                        <li>Tổng đài tư vấn mua hàng: <b>19003851</b></li>
+                        <li>Tổng đài dịch vụ vận chuyển: <b>19005341</b></li>
+                        <li>Email: <a href="mailto:vungtautravel@gmail.com">vungtautravel@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="content about">
+                    <h3>Theo dõi chúng tôi trên</h3>
+                    <ul class="social-icon">
+                        <li><a href=""><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i>Youtube</a></li>
+                    </ul>
+                </div>
+                <div class="content links">
+                    <h3>Đường Dẫn</h3>
+                    <ul class="link">
+                        <li><a href="../../website.html">Trang Chủ</a></li>
+                        <li><a href="">Về Chúng Tôi</a></li>
+                        <li><a href="">Thông Tin Liên Lạc</a></li>
+                        <li><a href="">Dịch Vụ</a></li>
+                        <li><a href="">Điều Kiện Chính Sách</a></li>
+                    </ul>                    
+                </div>
+                <div class="content help">
+                    <h3>Trợ giúp</h3>
+                    <ul class="link">
+                        <li><a href="">Trung tâm trợ giúp</a></li>
+                        <li><a href="">Hình thức thanh toán</a></li>
+                        <li><a href="">Hướng dẫn đăng nhập</a></li>
+                        <li><a href="">Quy định sử dụng </a></li>
+                        <li><a href="">Chính sách bảo mật</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                    </ul>                    
+                </div>
+            </div>
+        </footer>
+        <div onclick="scrollToTop()" role="button" id="return" title="Trở về đầu trang"><button type="button">^</button></div>
+    </body>
+</html>

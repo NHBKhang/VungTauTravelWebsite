@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Vũng Tàu Travel</title>
+        <meta http-equiv="refresh" content="600">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='register.css'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="register.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="https://i.pinimg.com/originals/4a/a5/34/4aa534605d1afc465c5bdc5dd80f1ecb.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <button id="back" type="button" onclick="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i></button>
+        <button id="home" type="button"><a href="../../website.html"><i class="fa-solid fa-house"></i></a></button>
+        <form action="">
+            <div class="form-container">
+                <div id="title-header" class="title"><h1 title="Vũng Tàu Travel">Vung Tau Travel</h1></div>
+                <div>
+                    <h3>ĐĂNG KÝ</h3>
+                    <br>
+                    <div class="signup__field">
+                        <label for="first_name" class="label">Họ và tên lót</label>
+                        <input type="text" name="first_name" id="first_name" class="input-field" autofocus>
+                    </div>
+                    <div class="signup__field">
+                        <label for="last_name" class="label">Tên</label>
+                        <input type="text" name="last_name" id="last_name" class="input-field">
+                    </div>  
+                    <div class="signup__field">
+                        <label for="phone" class="label">Số điện thoại</label>
+                        <input type="number" name="phone" id="phone" class="input-field">
+                    </div>            
+                    <div class="signup__field">
+                        <label for="email" class="label">Email</label>
+                        <input type="email" name="email" id="email" class="input-field">
+                    </div>              
+                    <div class="signup__field">
+                        <label for="password" class="label">Mật khẩu</label>
+                        <input type="password" name="password" id="password" class="input-field">
+                    </div>
+                    <div class="signup__field">
+                        <label for="address" class="label">Địa chỉ</label>
+                        <input type="text" name="address" id="address" class="input-field">
+                    </div>
+                    <div class="signup_field">
+                        <div id="incorrect" style="color:red;display:none;margin: 10px;">Bạn nhập không đủ thông tin</div>
+                    </div>
+                </div>
+                <br><br><br>
+                <div class="social-lmc">
+                    <div class="or">Hoặc đăng ký bằng:</div>
+                    <div class="social-signin">
+                        <div class="fb signin social-box">
+                            <a href="">
+                                <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/5/5f2c27c2674ad4a01c1cd42b2e0884aa.svg"/>
+                                <div><p class="inline">Đăng ký bằng </p>Facebook</div>
+                            </a>
+                        </div>
+                        <div class="gg signin social-box">
+                            <a href="">
+                                <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/c/c6bf231775a1d162b567c0882e1d7e3b.svg"/>
+                                <div><p class="inline">Đăng ký bằng </p>Google</div>
+                            </a>
+                        </div>
+                        <div class="tw signin social-box">
+                            <a href="">
+                                <img importance="low" loading="lazy" src="https://th.bing.com/th/id/R.1310501690026d99d58f4f06594d6b1a?rik=WwbzRD4WFHGTzg&pid=ImgRaw&r=0"/>
+                                <div><p class="inline">Đăng ký bằng </p>Twitter</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="signup__button">
+                    <button type="button" id="submit" class="button" onclick="check()">Đăng ký</button>
+                </div>
+            </div>
+        </form>        
+    </body>
+</html>

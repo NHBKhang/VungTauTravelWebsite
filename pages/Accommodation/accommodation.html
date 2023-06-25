@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Vũng Tàu Travel</title>
+        <meta http-equiv="refresh" content="600">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='accommodation.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href="../../header & footer/travelwebsite-h&f.css">
+        <link rel="stylesheet" type="text/css" href="../Tour/tour.css">
+        <link rel='stylesheet' type='text/css' media='only screen and (max-width: 1050px)' href='../../header & footer/responsive-h&f.css'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="accommodation.js"></script>
+        <script type="text/javascript" src="../../header & footer/travelwebsite-h&f.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="https://i.pinimg.com/originals/4a/a5/34/4aa534605d1afc465c5bdc5dd80f1ecb.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    </head>
+    <body>
+        <!--loadscript-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!--loadscript-->
+        <header>
+            <div id="home" class="flex">
+                <div id="logo-header" class="logo inline"><img src="../../img/logo.png" alt="logo"></div>
+                <div id="title-header" class="title inline"><h1 title="Vũng Tàu Travel" class="inline">Vung Tau Travel</h1></div>
+                <div id="login-header" class="login inline">
+                    <div class="see inline"><a title="Đăng ký"; href="../Register/register.html">Đăng ký</a></div>
+                    <pre style="font-size:1.4em; padding: 5px;" class="inline">/</pre>
+                    <div class="see inline">
+                        <button onclick="togglemenu()" class="login-button" title="Đăng nhập">Đăng nhập
+                            <i id="login-icon" class="fa-solid fa-user"></i>
+                            <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/3/393c6a1dee81cd3dc84df59672d43edb.svg"/>
+                        </button>
+                    </div>
+                </div>     
+                <div class="search inline">
+                    <form>
+                        <input id="box" aria-expanded="false" title="Nhập" type="search" placeholder="Nhập nơi muốn đến..."/>
+                        <button id="search" title="Tìm" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <p title="TÌm kiếm" onclick="searchbox()" id="search-button" class="responsive"><i class="fa-solid fa-magnifying-glass"></i></p>
+                    </form>
+                </div>
+            </div> 
+        </header>
+        <div id="login-menu">
+            <div class="lmw">
+                <h4>Đăng nhập tài khoản</h4>
+                <div onclick="removemenu()" role="button" id="lm-button"><button type="button"><i class="fa-solid fa-xmark"></i></button></div>
+                <div class="lmc">
+                    <form> 
+                        <div class="label"><label for="email">Email</label></div>
+                        <div class="input email"><input id="email" type="email" name="email"></div>
+                        <div id="error-email">Vui lòng nhập email của bạn</div>
+                    </form>
+                </div>
+                <div class="lmc">
+                    <form>
+                        <div class="label"><label for="password">Mật khẩu</label></div>
+                        <div class="input password"><input id="password" type="password" name="password"></div>
+                        <div id="error-password">Vui lòng nhập mật khẩu của bạn</div>
+                    </form>
+                    <a href="">Quên mật khẩu</a>
+                </div>
+                <div>
+                    <button id="sign" type="submit">Đăng nhập</button>
+                    <p class="inline">Bạn chưa có tài khoản?<a href="../Register/register.html">Đăng ký</a></p>
+                </div>
+            </div>
+            <div class="social-lmc">
+                <div class="or">Hoặc đăng nhập bằng:</div>
+                <div class="social-signin flex">
+                    <div class="fb signin flex">
+                        <a class="flex" href="">
+                            <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/5/5f2c27c2674ad4a01c1cd42b2e0884aa.svg"/>
+                            <div>Facebook</div>
+                        </a>
+                    </div>
+                    <div class="gg signin flex">
+                        <a class="flex" href="">
+                            <img importance="low" loading="lazy" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/c/c6bf231775a1d162b567c0882e1d7e3b.svg"/>
+                            <div>Google</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="header-menu" class="sticky">
+            <div class="menu">
+                <nav class="flex">
+                    <div onclick="show()" id="openMenu" role="button" aria-label="Hamburger Menu" class="menu-button flex"><button class="menu-button" type="button"><i class="fa-solid fa-bars"></i></button></div>
+                    <ul class="nav flex">
+                        <li><a href="../../website.html">Trang chủ</a></li>
+                        <li><a href="../Introduce/introduce.html">Giới thiệu</a></li>
+                        <li><a href="../Tour/tour.html">Tour du lịch</a></li>
+                        <li><a href="">Khách sạn</a></li>
+                        <li><a href="../Vehicles/vehicles.html">Thuê xe</a></li>
+                        <li><a href="../Contact/contact.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="mainMenu">
+            <div class="background" id="background"></div>
+            <div onclick="hide()" role="button" class="closeMenu"><button id="closeMenu" type="button"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="options flex" id="options">
+                <ul>
+                    <li><a href="../../website.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                    <li><a href=""><i class="fa-solid fa-table-list"></i>Đơn đặt hàng của tôi</a></li>
+                    <li><a href=""><i class="fa-solid fa-envelope"></i>Hộp thư của tôi</a></li>
+                    <li><a href=""><i class="fa-solid fa-clipboard-check"></i>Đã lưu</a></li>
+                    <li><a href=""><i class="fa-solid fa-phone"></i>Liên lạc với chúng tôi</a></li>
+                    <li><a href=""><i class="fa-solid fa-circle-question"></i>Trung tâm trợ giúp</a></li>
+                    <li><a href=""><i class="fa-solid fa-handshake"></i>Trở thành đối tác với chúng tôi</a></li>
+                </ul>
+            </div>
+        </div>
+        <section class="book mar" onmouseover="leftdate()">
+            <div id="title"><h1>Đặt Khách Sạn</h1></div>
+            <div id="book" class="row">
+                <div>
+                    <form action="">
+                        <div class="inputBox">
+                            <h3>Tên Khách sạn/Nhà nghỉ </h3>
+                            <select id="hotelnhouse" name="hotelnhouse" onchange="book()">
+                                <option disabled selected>Chọn khách sạn / nhà trọ</option>
+                                <option value="0">ibis Styles Vũng Tàu (1,850,000đ)</option>
+                                <option value="1">Khách Sạn & Nghỉ Dưỡng Imperial (3,900,000đ)</option>
+                                <option value="2">Khách sạn Bãi biển Annata (2,400,000đ)</option>
+                                <option value="3">Suối khoáng nóng Bình Châu (5,500,000đ)</option>
+                                <option disabled>(↑ Khách sạn) (Nhà Nghỉ ↓)</option>
+                                <option value="4">Banh Mi Motel (200,000đ)</option>
+                                <option value="5">Nhà Nghỉ Ngọc Thuận (225,000đ)</option>
+                                <option value="6">Nhà nghỉ Thuý Hằng (259,000đ)</option>
+                                <option value="7">Suối khoáng nóng Bình Châu (405,000đ)</option>
+                            </select>
+                        </div>
+                        <div class="inputBox">
+                            <h3>Tên người đặt phòng</h3>
+                            <input id="name" type="text" placeholder="Họ và tên">
+                        </div>
+                        <div class="inputBox">
+                            <h3>Số điện thoại liên lạc</h3>
+                            <input id="phone" type="number" placeholder="Số điện thoại">
+                        </div>
+                        <div class="inputBox">
+                            <h3>Khách và phòng</h3>
+                            <div style="display:flex;">
+                                <h2>Người lớn:</h2>  
+                                <input id="peoplenum" type="number" min="1" value="1" style ="margin:0 10px;">
+                                <h2>Trẻ em:</h2>
+                                <input id="childrennum" type="number" min="0" value="0" style ="margin:0 10px;">
+                                <h2>Số phòng:</h2>
+                                <input id="numofroom" type="number" min="1" max="10" value="1" style ="margin-left:10px;" onchange="book()">
+                        </div>
+                        <div class="inputBox">
+                            <h3>Nhận phòng </h3>
+                            <label for="Date Of Birth">
+                            <input placeholder="dd-mm-yyyy" id="godate" type="date" value="">
+                            </label>
+                        </div>
+                        <div class="inputBox">
+                            <h3>Số đêm </h3>
+                            <input placeholder="Số đêm" id="nightnum" type="number" min="1" max="30" value="1">
+                        </div>
+                        <div class="inputBox">
+                            <h3>Trả phòng: <span id="dayleft"></span></h3>
+                        </div>
+                        <div class="inputBox">
+                            <h3 style="color:rgb(1, 171, 21);">Tiền cọc (50% giá phòng x số phòng): <span id="price"></span></h3>
+                        </div>
+                        <div id="incorrect" style="color:red;display:none;">Bạn nhập không đủ thông tin</div>
+                        <input type="button" class="btn" value="Đặt Ngay">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="mar">
+            <div id="title"><h1>Khách Sạn Đề Xuất</h1></div>
+            <div class="recommend">
+                <div class="box-container">
+                    <div class="container">
+                        <div class="hotel-img" style="background-image: url(https://nudoanhnhan.net/wp-content/uploads/2020/08/NDN_ibis-styles-vung-tau_2.jpg);"></div>
+                        <div class="hotel-info">
+                            <span class="hotelname">ibis Styles Vũng Tàu <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span title="khách sạn" class="hotel"><i class="fa-solid fa-hotel"></i>Khách sạn:<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span class="capacity textbox"><i class="fa-solid fa-house-user iStyle"></i>Sức chứa: 2-4 người</span>
+                            <span class="location textbox"><i class="fa-solid fa-location-dot iStyle"></i>Địa chỉ: 117 Thùy Vân, Thắng Tam, Vũng Tàu, Việt Nam</span>
+                            <span class="bonus textbox flex">
+                                <p>Wifi miễn phí</p>
+                                <p>Bữa sáng</p>
+                            </span>
+                            <span class="near textbox"><i class="fa-solid fa-umbrella-beach iStyle"></i>Gần bãi biển</span>
+                            <span class="note textbox"><i class="fa-solid fa-note-sticky"></i>Trẻ em từ 4-11 tuổi được ở  miến phí</span>
+                            <span class="price">
+                                <p class="old">3.200.000 VND</p>
+                                <p class="new">1.850.000 VND</p> 
+                                <p class="discount">-42%</p>                      
+                            </span>                          
+                        </div>
+                        <div class="booked flex">
+                            <button class="book-tour">Đặt phòng</button>
+                            <a class="book-tour book-hotel" href="">Xem phòng</a>
+                        </div>
+                    </div>  
+                </div>
+                <div class="box-container">
+                    <div class="container">
+                        <div class="hotel-img" style="background-image: url(https://aigo.vn/wp-content/uploads/2017/07/khach-san-imperial-vung-tau-55-870x555.jpg);"></div>
+                        <div class="hotel-info">
+                            <span class="hotelname">Khách Sạn & Nghỉ Dưỡng Imperial <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span title="khách sạn" class="hotel"><i class="fa-solid fa-hotel"></i>Khách sạn:<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span class="capacity textbox"><i class="fa-solid fa-house-user iStyle"></i>Sức chứa: 2-4 người</span>
+                            <span class="location textbox"><i class="fa-solid fa-location-dot"></i>Địa chỉ: 159 Thùy Vân, Thắng Tam, Vũng Tàu, Việt Nam</span>
+                            <span class="bonus textbox flex">
+                                <p>Wifi miễn phí</p>
+                                <p>Bữa sáng</p>
+                                <p>Nước uống chào đón</p>
+                            </span>
+                            <span class="near textbox"><i class="fa-solid fa-umbrella-beach iStyle"></i>Gần bãi biển</span>
+                            <span class="note textbox"><i class="fa-solid fa-note-sticky"></i>Trẻ em từ 4-10 tuổi được ở  miến phí</span>
+                            <span class="price">
+                                <p class="old" id="old">5.500.000 VND</p>
+                                <p class="new">3.900.000 VND</p> 
+                                <p class="discount">-29%</p>                      
+                            </span>                          
+                        </div>
+                        <div class="booked flex">
+                            <button class="book-tour">Đặt phòng</button>
+                            <a class="book-tour book-hotel" href="">Xem phòng</a>
+                        </div>
+                    </div>  
+                </div>
+                <div class="box-container">
+                    <div class="container">
+                        <div class="hotel-img" style="background-image: url(https://www.vietnambooking.com/wp-content/uploads/2019/11/dat-phong-khach-san-vung-tau-tet-2020-gia-re-3.jpg);"></div>
+                        <div class="hotel-info">
+                            <span class="hotelname">Khách sạn Bãi biển Annata <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span title="khách sạn" class="hotel"><i class="fa-solid fa-hotel"></i>Khách sạn:<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span class="capacity textbox"><i class="fa-solid fa-house-user iStyle"></i>Sức chứa: 2-4 người</span>
+                            <span class="location textbox"><i class="fa-solid fa-location-dot iStyle"></i>Địa chỉ: 165 Thùy Vân, Thắng Tam, Vũng Tàu, Việt Nam</span>
+                            <span class="bonus textbox flex">
+                                <p>Wifi miễn phí</p>
+                                <p>Bữa sáng</p>
+                                <p>Nước uống chào đón</p>
+                            </span>
+                            <span class="near textbox"><i class="fa-solid fa-umbrella-beach iStyle"></i>Gần bãi biển</span>
+                            <span class="note textbox"><i class="fa-solid fa-note-sticky"></i>Trẻ em từ 1-5 tuổi được ở  miến phí</span>
+                            <span class="price">
+                                <p class="old">3.250.000 VND</p>
+                                <p class="new">2.400.000 VND</p> 
+                                <p class="discount">-26%</p>                      
+                            </span>                          
+                        </div>
+                        <div class="booked flex">
+                            <button class="book-tour">Đặt phòng</button>
+                            <a class="book-tour book-hotel" href="">Xem phòng</a>
+                        </div>
+                    </div>  
+                </div>
+                <div class="box-container">
+                    <div class="container">
+                        <div class="hotel-img" style="background-image: url(https://i.vnbooking.com/images/vung_tau/khu_du_lich_suoi_khoang_nong_sai_gon_binh_chau/29666313120614590017836897800x600.jpg);"></div>
+                        <div class="hotel-info">
+                            <span class="hotelname">Suối khoáng nóng Bình Châu <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span title="khách sạn" class="hotel"><i class="fa-solid fa-hotel"></i>Khách sạn:<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span class="capacity textbox"><i class="fa-solid fa-house-user iStyle"></i>Sức chứa: 2-4 người</span>
+                            <span class="location textbox"><i class="fa-solid fa-location-dot iStyle"></i>Địa chỉ: QL55, Bình Châu, Xuyên Mộc, Hồ Cốc, Vũng Tàu, Việt Nam</span>
+                            <span class="bonus textbox flex">
+                                <p>Wifi miễn phí</p>
+                                <p>Bữa sáng</p>
+                                <p>Bãi đậu xe</p>
+                            </span>
+                            <span class="note textbox"><i class="fa-solid fa-note-sticky"></i>Trẻ em từ 1-5 tuổi được ở  miến phí</span>
+                            <span class="price">
+                                <p class="old">10.000.000 VND</p>
+                                <p class="new">5.500.000 VND</p> 
+                                <p class="discount">-45%</p>                      
+                            </span>                          
+                        </div>
+                        <div class="booked flex">
+                            <button class="book-tour">Đặt phòng</button>
+                            <a class="book-tour book-hotel" href="">Xem phòng</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+        <section class="mar">
+            <div id="title"><h1>Nhà Nghỉ Đề Xuất</h1></div>
+            <div class="recommend">
+                <div class="box-container">
+                    <div class="container">
+                        <div class="hotel-img" style="background-image: url(https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/67730837-2048x1435-FIT_AND_TRIM-f61c10e88eb4b6341eaee56717da6f1d.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640);"></div>
+                        <div class="hotel-info">
+                            <span class="hotelname">Banh Mi Motel <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span title="nhà nghỉ" class="hotel"><i class="fa-solid fa-hotel"></i>Nhà nghỉ:<i class="fa-solid fa-star"></i></span>
+                            <span class="capacity textbox"><i class="fa-solid fa-house-user iStyle"></i>Sức chứa: 2-4 người</span>
+                            <span class="location textbox"><i class="fa-solid fa-location-dot iStyle"></i>Địa chỉ: 191 Hoàng Hoa Thám, Thắng Tam, Vũng Tàu, Việt Nam</span>
+                            <span class="bonus textbox flex">
+                                <p>Wifi miễn phí</p>
+                            </span>
+                            <span class="note textbox"><i class="fa-solid fa-note-sticky"></i>Trẻ em từ 4-11 tuổi được ở  miến phí</span>
+                            <span class="price">
+                                <p class="old">400.000 VND</p>
+                                <p class="new">200.000 VND</p> 
+                                <p class="discount">-50%</p>                      
+                            </span>                          
+                        </div>
+                        <div class="booked flex">
+                            <button class="book-tour">Đặt phòng</button>
+                            <a class="book-tour book-hotel" href="">Xem phòng</a>
+                        </div>
+                    </div>  
+                </div>
+                <div class="box-container">
+                    <div class="container">
+                        <div class="hotel-img" style="background-image: url(https://pix8.agoda.net/hotelImages/706/706527/706527_14082916140021709547.jpg?ca=2&ce=1&s=1024x768);"></div>
+                        <div class="hotel-info">
+                            <span class="hotelname">Nhà Nghỉ Ngọc Thuận <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span title="nhà nghỉ" class="hotel"><i class="fa-solid fa-hotel"></i>Nhà nghỉ:<i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i></span>
+                            <span class="capacity textbox"><i class="fa-solid fa-house-user iStyle"></i>Sức chứa: 1-6 người</span>
+                            <span class="location textbox"><i class="fa-solid fa-location-dot"></i>Địa chỉ: A29 Bàu Sen 1, Hoàng Hoa Thám, khu Á Châu, Vũng Tàu, Việt Nam</span>
+                            <span class="bonus textbox flex">
+                                <p>Wifi miễn phí</p>
+                            </span>
+                            <span class="note textbox"><i class="fa-solid fa-note-sticky"></i>Trẻ em từ 1-10 tuổi được ở  miến phí</span>
+                            <span class="price">
+                                <p class="old" id="old">450.000 VND</p>
+                                <p class="new">225.000 VND</p> 
+                                <p class="discount">-50%</p>                      
+                            </span>                          
+                        </div>
+                        <div class="booked flex">
+                            <button class="book-tour">Đặt phòng</button>
+                            <a class="book-tour book-hotel" href="">Xem phòng</a>
+                        </div>
+                    </div>  
+                </div>
+                <div class="box-container">
+                    <div class="container">
+                        <div class="hotel-img" style="background-image: url(https://pix8.agoda.net/hotelImages/216/2166721/2166721_17040922400052257260.jpg?ca=6&ce=1&s=1024x768);"></div>
+                        <div class="hotel-info">
+                            <span class="hotelname">Nhà nghỉ Thuý Hằng <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span title="nhà nghỉ" class="hotel"><i class="fa-solid fa-hotel"></i>Nhà nghỉ:<i class="fa-solid fa-star"></i></span>
+                            <span class="capacity textbox"><i class="fa-solid fa-house-user iStyle"></i>Sức chứa: 2-4 người</span>
+                            <span class="location textbox"><i class="fa-solid fa-location-dot iStyle"></i>Địa chỉ: Đường 36, Hải Tân, Long Hải, Long Điền, Vũng Tàu, Việt Nam</span>
+                            <span class="bonus textbox flex">
+                                <p>Wifi miễn phí</p>
+                            </span>
+                            <span class="note textbox"><i class="fa-solid fa-note-sticky"></i>Trẻ em từ 1-5 tuổi được ở  miến phí</span>
+                            <span class="price">
+                                <p class="old">500.000 VND</p>
+                                <p class="new">259.000 VND</p> 
+                                <p class="discount">-48%</p>                      
+                            </span>                          
+                        </div>
+                        <div class="booked flex">
+                            <button class="book-tour">Đặt phòng</button>
+                            <a class="book-tour book-hotel" href="">Xem phòng</a>
+                        </div>
+                    </div>  
+                </div>
+                <div class="box-container">
+                    <div class="container ">
+                        <div class="hotel-img" style="background-image: url(https://pix8.agoda.net/hotelImages/7126452/-1/2d63a2b113cfd888fa4ab7db4522b5a8.jpg?ca=8&ce=1&s=1024x768);"></div>
+                        <div class="hotel-info">
+                            <span class="hotelname">Suối khoáng nóng Bình Châu <img src="https://tour.dulichvietnam.com.vn/template/images/icon-hot.gif"></span>
+                            <span title="nhà nghỉ" class="hotel"><i class="fa-solid fa-hotel"></i>Nhà nghỉ:</i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i></span>
+                            <span class="capacity textbox"><i class="fa-solid fa-house-user iStyle"></i>Sức chứa: 2-6 người</span>
+                            <span class="location textbox"><i class="fa-solid fa-location-dot iStyle"></i>Địa chỉ: 68 Võ Thị Sáu, phường Thắng Tam, Thắng Tam, Vũng Tàu, Việt Nam</span>
+                            <span class="bonus textbox flex">
+                                <p>Wifi miễn phí</p>
+                                <p>Bãi đậu xe</p>
+                            </span>
+                            <span class="note textbox"><i class="fa-solid fa-note-sticky"></i>Trẻ em từ 1-5 tuổi được ở  miến phí</span>
+                            <span class="price">
+                                <p class="old">900.000 VND</p>
+                                <p class="new">405.000 VND</p> 
+                                <p class="discount">-45%</p>                      
+                            </span>                          
+                        </div>
+                        <div class="booked flex">
+                            <button class="book-tour">Đặt phòng</button>
+                            <a class="book-tour book-hotel" href="">Xem phòng</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+        <br>
+        <footer class="flex">
+            <div class="container flex">
+                <div class="content contactus">
+                    <h3>Liên hệ</h3>
+                    <ul>
+                        <li>CÔNG TY THƯƠNG MẠI DU LỊCH VŨNG TÀU TRAVEL</li>
+                        <li>Trụ sở: 371 Nguyễn Kiệm, phường 3, quận Gò vấp, TP.HCM</li>
+                        <li>Tổng đài tư vấn mua hàng: <b>19003851</b></li>
+                        <li>Tổng đài dịch vụ vận chuyển: <b>19005341</b></li>
+                        <li>Email: <a href="mailto:vungtautravel@gmail.com">vungtautravel@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="content about">
+                    <h3>Theo dõi chúng tôi trên</h3>
+                    <ul class="social-icon">
+                        <li><a href=""><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i>Youtube</a></li>
+                    </ul>
+                </div>
+                <div class="content links">
+                    <h3>Đường Dẫn</h3>
+                    <ul class="link">
+                        <li><a href="../../website.html">Trang Chủ</a></li>
+                        <li><a href="">Về Chúng Tôi</a></li>
+                        <li><a href="">Thông Tin Liên Lạc</a></li>
+                        <li><a href="">Dịch Vụ</a></li>
+                        <li><a href="">Điều Kiện Chính Sách</a></li>
+                    </ul>                    
+                </div>
+                <div class="content help">
+                    <h3>Trợ giúp</h3>
+                    <ul class="link">
+                        <li><a href="">Trung tâm trợ giúp</a></li>
+                        <li><a href="">Hình thức thanh toán</a></li>
+                        <li><a href="">Hướng dẫn đăng nhập</a></li>
+                        <li><a href="">Quy định sử dụng </a></li>
+                        <li><a href="">Chính sách bảo mật</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                    </ul>                    
+                </div>
+            </div>
+        </footer>
+        <div onclick="scrollToTop()" role="button" id="return" title="Trở về đầu trang"><button type="button">^</button></div>
+    </body>
+</html>
